@@ -39,21 +39,21 @@
 
 @font-face {
   font-family: Chicago;
-  src: url("fonts/converted/ChicagoFLF.ttf");
+  src: url("fonts/ChicagoFLF.ttf");
 }
 @font-face {
   font-family: Monaco;
-  src: url("fonts/converted/monaco.ttf")
+  src: url("fonts/monaco.ttf")
 }
 
 /* Fonts below are recreations by Giles Booth */
 @font-face {
   font-family: Chicago_12;
-  src: url("fonts/converted/ChiKareGo2.ttf"); 
+  src: url("fonts/ChiKareGo2.ttf"); 
 }
 @font-face {
   font-family: Geneva_9;
-  src: url("fonts/converted/FindersKeepers.ttf")
+  src: url("fonts/FindersKeepers.ttf")
 }
 ::-webkit-scrollbar {
   width: 22px;
