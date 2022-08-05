@@ -1,0 +1,22 @@
+<svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="-0.5" width="21" height="22.375" transform="matrix(1 0 0 -1 0 22.375)" fill="white" stroke="black"/>
+<rect x="1" y="0.375" width="20" height="2" fill="black"/>
+<rect x="1.375" y="11" width="5.5" height="1.375" fill="black"/>
+<rect x="6.875" y="5.5" width="6.875" height="1.375" fill="black"/>
+<rect x="6.875" y="5.5" width="5.5" height="1.375" transform="rotate(90 6.875 5.5)" fill="black"/>
+<rect x="9.625" y="17.875" width="1.375" height="1.375" transform="rotate(90 9.625 17.875)" fill="black"/>
+<rect x="11" y="19.25" width="1.375" height="1.375" transform="rotate(90 11 19.25)" fill="black"/>
+<rect x="19.25" y="11" width="1.375" height="1.375" transform="rotate(90 19.25 11)" fill="black"/>
+<rect x="17.875" y="12.375" width="1.375" height="1.375" transform="rotate(90 17.875 12.375)" fill="black"/>
+<rect x="16.5" y="13.75" width="1.375" height="1.375" transform="rotate(90 16.5 13.75)" fill="black"/>
+<rect x="15.125" y="15.125" width="1.375" height="1.375" transform="rotate(90 15.125 15.125)" fill="black"/>
+<rect x="13.75" y="16.5" width="1.375" height="1.375" transform="rotate(90 13.75 16.5)" fill="black"/>
+<rect x="12.375" y="17.875" width="1.375" height="1.375" transform="rotate(90 12.375 17.875)" fill="black"/>
+<rect x="8.25" y="16.5" width="1.375" height="1.375" transform="rotate(90 8.25 16.5)" fill="black"/>
+<rect x="6.875" y="15.125" width="1.375" height="1.375" transform="rotate(90 6.875 15.125)" fill="black"/>
+<rect x="5.5" y="13.75" width="1.375" height="1.375" transform="rotate(90 5.5 13.75)" fill="black"/>
+<rect x="4.125" y="12.375" width="1.375" height="1.375" transform="rotate(90 4.125 12.375)" fill="black"/>
+<rect x="2.75" y="11" width="1.375" height="1.375" transform="rotate(90 2.75 11)" fill="black"/>
+<rect x="15.125" y="5.5" width="5.5" height="1.375" transform="rotate(90 15.125 5.5)" fill="black"/>
+<rect x="13.75" y="11" width="5.5" height="1.375" fill="black"/>
+</svg>

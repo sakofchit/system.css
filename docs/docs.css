@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Geneva9;
+  src: url("fonts/converted/FindersKeepers.ttf")
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  width: 95rem;
+  margin-left: 240px;
+  margin-bottom: 60px;
+  margin-top: 25px;
+}
+
+.container{
+  width: 80%;
+}
+
+
+
+aside {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 8px;
+  display: flex;
+  align-items: stretch;
+}
+
+html {
+  font-family: "Inconsolata", Menlo, Chicago, Geneva;
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  min-height: 100vh;
+}
+
+h3 {
+  font-family: Chicago;
+  font-size: 1.5em;
+}
+
+.heading {
+  font-size: 3rem;
+}
+
+.desc {
+  font-family: Geneva_9;
+  font-size: 2em;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.component {
+  display: flex;
+  margin-top: 24px;
+  font-family: Geneva;
+  font-size: 1em;
+}
+
+.dialog-text {
+  font-family: Chicago_12;
+  font-size: 1.5em;
+  margin-top: 30px;
+  vertical-align: center;
+}
+
+
+p {
+  font-family: Geneva;
+  font-size: 0.9em;
+}
+
+
+blockquote {
+  margin: 0 0 20px;
+  padding: 20px;
+  width: 80%;
+  background: rgb(250, 250, 250);
+  font-size: 16px;
+}
+
+blockquote footer {
+  margin: 12px 0 0 12px;
+}
+
+.example {
+  margin: 16px;
+  padding: 12px 24px;
+  border-left: 1px solid #000000;
+}
+
+summary {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+pre {
+  font-size: 13px;
+}
+
+
+.btn.active {
+  background: black;
+  border-radius:6px;
+  color: white;
+  font-family: Chicago_12;
+}

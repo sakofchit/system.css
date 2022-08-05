@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+  <title>system.css | A design system for building retro Apple-inspired interfaces</title>
+  <link rel="Shortcut Icon" type="image/x-icon" href="icon.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta property="og:title" content="system.css" />
+  <meta name="Description" content="A design system for building retro Apple interfaces" />
+  <meta property="og:description" content="A design system for building retro Apple interfaces" />
+
+  <link rel="stylesheet" href="system.css">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body ontouchstart>
+  <aside>
+    <div class="window">
+      <div class="title-bar"> 
+        <button class="close"><span class="hidden">Close</span></button>
+        <h1 class="title">Docs</h1>
+        <button class="resize"><span class="hidden">Resize</span></button>
+      </div>
+      <div class="separator"></div>
+      <div class="window-pane">
+        <ul class="files">
+          <li>Intro</li>
+          <li>Buttons</li>
+          <li>Windows</li>
+          <li>Typography</li>
+          <li>Contributing</li>
+
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+  <main>
+  <div class="container">
+    <div class="standard-dialog">
+      <p class="heading center">System.css</p>
+        <p class="desc center">A design system for building retro <img class="apple"> inspired interfaces</p>
+  
+      <h2 class="subheading">Intro</h2>
+        <p>System.css is a CSS library for building interfaces that resemble Apple's System OS which ran from 1984-1991. Design-wise, not much really changed from System 1 to System 6; however this library is based on System 6 as it was the final monochrome version of MacOS.</p>
+  
+        <p>Fortunately, this library does not use any JavaScript and is compatible with any front-end framework of your choice. Most styles can also be overwritten to allow for deeper customization.</p>
+  
+        <h3 class="subheading">Usage</h3>
+  
+        <h2 class="subheading">Components</h2>
+  
+        <section class="component">
+          <h3 class="subheading" id="buttons">Buttons</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              A button is a rounded rectangle that is named with text. Clicking a button performs the action described by the button's name.
+              <footer>&mdash; Apple HI Guidelines, p. 204</footer>
+            </blockquote>
+  
+            <p>A standard button measures 59px wide and 20px tall. We use the <code>btn</code> class for these buttons</p>
+
+            <%- example(`
+
+            <button class="btn">Cancel</button>
+            <button class="btn">Submit</button> 
+            
+            `)%>
+
+            <p>When pressed, buttons invert. The button below is stimulated to be in the active state.</p>
+
+            <%- example(`
+
+            <button [[class="btn active"]] class="btn">Active</button>
+            
+            `)%>
+  
+            <p>Buttons can also have dynamic widths.</p>
+
+            <%- example(`
+
+            <button class="btn">Buttons can be long!!</button>
+            
+            `)%>
+  
+            <p>Disabled buttons look the same as standard buttons, but with grey button text. Add the <code>disabled</code> attribute to use it.</p>
+
+            <%- example(`
+
+            <button class="btn" disabled>Disabled</button>
+            
+            `)%>
+  
+  
+            <!--<p>Default buttons have an extra border around them. Add the <code>disabled</code> attribute to use it.</p>
+  
+            <div class="example">
+              <span class="default">
+                <button [[ class="btn"]]>Default</button>
+              </span>
+            </div> -->
+          </div>
+  
+  
+        </section>
+
+        <section class="component">
+          <h3 class="subheading" id="textbox">Radio Buttons</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              A radio button is a Macintosh control that displays a setting, either on or off, and is part of a group in which only one button can be on at a time.
+              <footer>&mdash; Apple HI Guidelines, p. 210</footer>
+            </blockquote>
+  
+            <p>Radio Buttons can be rendered by specifying a <code>radio</code> type on an <code>input</code> tag and assigning it a name.</p>
+
+            <%- example(`
+              <div class="field-row">
+                <input id="radio1" type="radio" name="first-example">
+                <label for="radio1">Left</label>
+              </div>
+              <div class="field-row">
+                <input id="radio2" type="radio" name="first-example">
+                <label for="radio2">Center</label>
+              </div>
+              <div class="field-row">
+                <input id="radio3" type="radio" name="first-example">
+                <label for="radio3">Right</label>
+            </div>
+            
+            `)%>
+
+            
+          </div>
+        </section>
+  
+        <section class="component">
+          <h3 class="subheading" id="dialogs">Dialogs</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              Dialog boxes are windows that provide a standard framework in which the
+              computer can present alternatives from which the user can choose.
+              <footer>&mdash; Apple HI Guidelines, p. 176</footer>
+            </blockquote>
+  
+            <p>
+              A basic dialog is just a box with text in it.
+            </p>
+
+            <%- example(`
+            
+            <div class="standard-dialog center">
+              <p class="dialog-text">The Macintosh Finder, Version 1.0 (18 Jan 84)</p>
+              <p class="dialog-text">&copy; 1984 Apple Computer</p>
+            </div>
+            
+            
+            `)%>
+
+            <p>
+              We can also have a bordered dialog, which typically has some interactive component within it.
+            </p>
+
+            <%- example(`
+            <div class="outer-border">
+              <div class="inner-border center">
+                <p class="dialog-text">The Macintosh Finder, Version 1.0 (18 Jan 84)</p>
+                <p class="dialog-text">&copy; 1984 Apple Computer</p>
+              </div>
+            </div>
+
+            
+            
+            `)%>
+  
+  
+            <blockquote>
+              Alert boxes appear when the system software or an application needs to
+              communicate information to the user. Alert boxes provide messages about
+              error conditions and warn users about potentially hazardous situations or
+              actions
+              <footer>&mdash; Apple HI Guidelines, p. 176</footer>
+            </blockquote>
+          </div>
+        </section>
+  
+        <section class="component">
+          <h3 class="subheading" id="dropdown">Dropdown</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              A dropdown is a menu that offers a list of options.
+            </blockquote>
+  
+            <p>Apply the <code>dd-toggle</code> class to what you want to serve as a dropdown</p>
+  
+            <%- example(`
+              
+  
+              <label class="dropdown">
+  
+                <div class="dd-toggle">
+                  File
+                </div>
+              
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul class="dd-menu">
+                  <li>Action</li>
+                  <li>Another action</li>
+                  <li>Something else here</li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="https://twitter.com/sakofchit">sakun's twitter</a>
+                  </li>
+                </ul>
+                
+              </label>
+  
+              <label class="dropdown">
+  
+                <div class="dd-toggle">
+                  Edit
+                </div>
+              
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul class="dd-menu">
+                  <li>Woah</li>
+                  <li class="divider"></li>
+                  <li>Another action</li>
+                  <li>Something else here</li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="https://sakun.co">sakun's projects</a>
+                  </li>
+                </ul>
+                
+              </label>
+  
+              <label class="dropdown">
+  
+                <div class="dd-toggle">
+                  View
+                </div>
+              
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul class="dd-menu">
+                  <li>Action</li>
+                  <li>Another action</li>
+                  <li>Something else here</li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="https://apple.com">Apple</a>
+                  </li>
+                </ul>
+                
+              </label>
+  
+              <label class="dropdown">
+  
+                <div class="dd-toggle">
+                  Special
+                </div>
+              
+                <input type="checkbox" class="dd-input" id="test">
+              
+                <ul class="dd-menu">
+                  <li>You probably</li>
+                  <li>Get the</li>
+                  <li class="divider"></li>
+                  <li>Idea</li>
+                </ul>
+                
+              </label>
+              `)%>
+  
+          </div>
+        </section>
+  
+        <section class="component">
+          <h3 class="subheading" id="textbox">Text Box</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              The place or places in a dialog box where information can be typed. Also called text entry field.
+              <footer>&mdash; Apple HI Guidelines, p. 372</footer>
+            </blockquote>
+  
+            <p>Text Boxes can be rendered by specifying a <code>text</code> type on an <code>input</code> tag</p>
+
+            <%- example(`
+
+            <input type="text" placeholder="some cool text"/>
+            `)%>
+  
+            <p>Other types of text are also supported</p>
+
+            <%- example(`
+            <form>
+              <label for="email">Email</label><br>
+              <input type="email" placeholder="panic@thedis.co"/><br>
+              <label for="password">Password</label><br>
+              <input type="password" placeholder="password"/><br><br>
+            </form> 
+            `)%>
+            
+            
+          </div>
+        </section>
+
+  
+        <section class="component">
+          <h2 class="subheading" id="windows">Windows</h2>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              Standard document windows have standard structural components.
+              These components include the title bar, size box, close box, zoom box,
+              and scroll bars. Windows are designed for visual consistency across all monitors 
+              <footer>&mdash; Apple HI Guidelines, p. 134, 159</footer>
+            </blockquote>
+          </div>
+        </section>
+        
+  
+  
+        <section class="component">
+          <h3 class="subheading" id="title-bar">Title Bar</h3>
+          <div style="padding-left: 20px;">
+  
+            <blockquote>
+              A standard title bar is at least 19px tall, has a close button, caption, and racing stripes.
+            </blockquote>
+  
+            <p>They're usually a part of a window. Title bars use the Chicago 12pt font.</p>
+
+            <%- example(`
+            
+            <div class="window">
+              <div class="title-bar"> 
+                <button class="close"></button>
+                <h1 class="title">A Title Bar</h1>
+                <button class="hidden"></button>
+              </div>
+            </div>
+            
+            `)%>
+  
+            <p>Title bars can look different depending on what they're intended for.</p>
+
+            <%- example(`
+            
+            <div class="window">
+              <div class="title-bar"> 
+                <button class="close"></button>
+                <h1 class="title">Also a Title Bar</h1>
+                <button class="resize"></button>
+              </div>
+            </div>
+
+            <div class="window">
+              <div class="title-bar"> 
+                <h1 class="title">Dialog Title</h1>
+              </div>
+            </div>
+            
+            `)%>
+  
+            <p>You can also set a title bar to be inactive by applying the <code>.inactive-title-bar</code> class</p>
+
+            <%- example(`
+            
+            <div class="window">
+              <div class="inactive-title-bar"> 
+      
+                <h1 class="title">Inactive Title Bar</h1>
+            
+              </div>
+            </div>
+            
+            `)%>
+  
+          </div>
+        </section>
+  
+  
+  
+        <section class="component">
+          <h3 class="subheading" id="title-bar">Window Contents</h3>
+          <div style="padding-left: 20px;">
+  
+            <blockquote>
+              Document windows present a view into the content that people create and store.
+              <footer>&mdash; Apple HI Guidelines, p. 134</footer>
+            </blockquote>
+  
+            <p>This is a window (without stuff in it)</p>
+
+            <%- example(`
+            
+            <div class="window">
+              <div class="title-bar"> 
+                <button class="close"></button>
+                <h1 class="title">Window Without Stuff</h1>
+                <button class="resize"></button>
+              </div>
+            </div>
+            
+            `)%>
+          
+  
+            <p>This is a window with stuff in it. We can achieve this by simply adding a div with the <code>.window-pane</code> below the title bar.</p>
+  
+            <%- example(`
+            
+            <div class="window">
+              <div class="title-bar"> 
+                <button class="close"></button>
+                <h1 class="title">Window With Stuff</h1>
+                <button class="resize"></button>
+              </div>
+              <div class="separator"></div>
+              
+              <div class="window-pane">
+                Woo I got stuff in me!
+              </div>
+            </div>
+            
+            `)%>
+
+
+  
+            <p>You can also add a details bar to a window by adding<code>.details__bar</code> below the title bar.</p>
+
+            <%- example(`
+            
+            <div class="window">
+              <div class="title-bar"> 
+                <button class="close"></button>
+                <h1 class="title">Window With Details</h1>
+                <button class="resize"></button>
+              </div>
+              <div class="details__bar">
+                <span>some</span>
+                <span>more</span>
+                <span>details</span>
+              </div>
+              
+              <div class="window-pane">
+                Woo I got a details bar.
+              </div>
+            </div>
+            
+            `)%>
+  
+            <p>You can also create an inactive window using an inactive title bar.</p>
+
+            <%- example(`
+              <div class="window">
+                <div class="inactive-title-bar"> 
+                  <h1 class="title">Inactive Window</h1>
+                </div>
+                <div class="details__bar">
+                  <span>some</span>
+                  <span>more</span>
+                  <span>details</span>
+                </div>
+                
+                <div class="window-pane">
+                  not active :(
+                </div>
+              </div>
+            `)%>
+
+  
+          </div>
+        </section>
+  
+        <h2 class="subheading">Contributing, Credits, etc.</h2>
+  
+        <section class="component">
+          <div>
+            <p>Thanks for checking this project out! This library was made in good fun and was largely inspired by <a href="https://github.com/jdan/98.css">98.css</a>.</p>
+  
+            <p>It's also still in beta! I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found here.</p>
+              
+              
+            <p>If you find a bug, consider opening an issue here. If there's something that you'd like to add, please feel free to create a PR!</p>
+  
+            <p>If you'd like to see what else I'm up to, consider following me on <a href="https://twitter.com/sakofchit">Twitter</a> or checking out my <a href="https://sakun.co">personal site</a> :)</p>
+          </div>
+        </section>
+    </div>
+  
+  </div>
+  </main>
+</body>
+</html>

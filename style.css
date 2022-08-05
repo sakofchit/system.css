@@ -1,0 +1,634 @@
+/**
+ * system.css
+ * Copyright (c) 2022 Sakun Acharige <sakun.co>
+ */
+
+:root {
+  --box-shadow: 2px 2px;
+
+  /* Spacing */
+  --element-spacing: 8px;
+  --grouped-button-spacing: 4px;
+  --grouped-element-spacing: 6px;
+  --radio-width: 12px;
+  --checkbox-width: 13px;
+  --radio-label-spacing: 6px;
+  --range-track-height: 4px;
+  --range-spacing: 10px;
+
+  /* Some detailed computations for radio buttons and checkboxes (from 98.css) */
+  --radio-total-width-precalc: var(--radio-width) + var(--radio-label-spacing);
+  --radio-total-width: calc(var(--radio-total-width-precalc));
+  --radio-left: calc(-1 * var(--radio-total-width-precalc));
+  --radio-dot-width: 6.13px;
+  --radio-dot-top: calc(var(--radio-width) / 2 - var(--radio-dot-width) / 2);
+  --radio-dot-left: calc(
+    -1 * (var(--radio-total-width-precalc)) + var(--radio-width) / 2 - var(
+        --radio-dot-width
+      ) / 2
+  );
+
+  --checkbox-total-width-precalc: var(--checkbox-width) +
+    var(--radio-label-spacing);
+  --checkbox-total-width: calc(var(--checkbox-total-width-precalc));
+  --checkbox-left: calc(-1 * var(--checkbox-total-width-precalc));
+  --checkmark-width: 7px;
+  --checkmark-top: 3px;
+  --checkmark-left: 3px;
+}
+
+@font-face {
+  font-family: Chicago;
+  src: url("fonts/converted/ChicagoFLF.ttf");
+}
+@font-face {
+  font-family: Monaco;
+  src: url("fonts/converted/monaco.ttf")
+}
+
+/* Fonts below are recreations by Giles Booth */
+@font-face {
+  font-family: Chicago_12;
+  src: url("fonts/converted/ChiKareGo2.ttf"); 
+}
+@font-face {
+  font-family: Geneva_9;
+  src: url("fonts/converted/FindersKeepers.ttf")
+}
+::-webkit-scrollbar {
+  width: 22px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background-color: white;
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  width: 10px;
+  border-left: 3px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 20px;
+  box-sizing: content-box;
+  background-color: #fff;
+  border: 2px solid black;
+  border-right: none;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  background-repeat: no-repeat;
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-up.svg");
+}
+::-webkit-scrollbar-button:vertical:start:active {
+  background-repeat: no-repeat;
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-up-active.svg");
+}
+::-webkit-scrollbar-button:vertical:end {
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-down.svg");
+}
+::-webkit-scrollbar-button:vertical:end:active {
+  background-repeat: no-repeat;
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-down-active.svg");
+}
+
+::-webkit-scrollbar-button:horizontal:start {
+  background-repeat: no-repeat;
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-left.svg");
+}
+::-webkit-scrollbar-button:horizontal:start:active {
+  background-repeat: no-repeat;
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-left-active.svg");
+}
+::-webkit-scrollbar-button:horizontal:end {
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-right.svg");
+}
+::-webkit-scrollbar-button:horizontal:end:active {
+  background-repeat: no-repeat;
+  height: 23.38px;
+  background-image: svg-load("./icon/scrollbar-right-active.svg");
+}
+
+body {
+  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center, linear-gradient(#ffffff 21px, transparent 1%) center, #000000;
+  background-size: 22px 22px;
+  background-attachment: fixed;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+hr {
+  border-top: 0.15em solid #000;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+h1,
+.heading {
+  font-family: Chicago;
+  font-size: 1em;
+}
+
+h2 {
+  font-family: Chicago;
+  font-size: 2em;
+}
+
+.standard-button {
+  display: block;
+  min-width: 59px;
+  min-height: 20px;
+}
+
+/*p {
+  font-family: Monaco;
+  font-size: 22px;
+}*/
+
+/* dialogs */
+
+.standard-dialog {
+  border: 2px solid;
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+}
+
+.inner-border {
+  border-color: black;
+  border-top: 3.5px solid;
+  border-bottom: 3.5px solid;
+  border-left: 5px solid;
+  border-right: 5px solid;
+}
+.outer-border {
+  border-color: black;
+  border: 2px solid;
+  padding: 3px;
+}
+
+/* title bar */
+.title-bar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  margin: 0.1rem 0;
+  padding: 0.2rem 0.1rem;
+  background: linear-gradient(#000 50%, transparent 50%);
+  background-size: 6.6666666667% 13.3333333333%;
+  background-clip: content-box;
+}
+.title-bar .title {
+  padding: 0 0.5em;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  background: #fff;
+  cursor: default;
+  font-family: Chicago_12;
+}
+
+.inactive-title-bar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  margin: 0.1rem 0;
+  padding: 0.2rem 0.1rem;
+  background-size: 6.6666666667% 13.3333333333%;
+  background-clip: content-box;
+}
+.inactive-title-bar .title {
+  padding: 0 0.5em;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  cursor: default;
+  font-family: Chicago_12;
+  color:#A5A5A5;
+}
+
+.title-bar button {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 0.2rem;
+  border: 4px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  transform: scale(0.5);
+}
+.title-bar button span {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.title-bar button.close::before, .title-bar button.close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.title-bar button.close::before {
+  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
+  background-size: 30% 4px, 30% 4px, 4px 30%, 4px 30%;
+  background-repeat: no-repeat;
+}
+.title-bar button.close::after {
+  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
+  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px, 3.6363636364px 22.5%, 3.6363636364px 22.5%;
+  background-repeat: no-repeat;
+  transform: rotate(45deg) scale(1.1);
+}
+.title-bar button.close:active::before, .title-bar button.close:active::after {
+  opacity: 1;
+}
+.title-bar button.resize {
+  background: linear-gradient(#000 0%, #000 100%) left 58%, linear-gradient(to bottom, #000 0%, #000 100%) 58% top;
+  background-size: 60% 4px, 4px 60%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+.title-bar button.resize:active {
+  background: #fff;
+}
+.title-bar button.hidden {
+  visibility: hidden;
+}
+
+.window {
+  flex-direction: column;
+  margin: 1rem;
+  min-width: 320px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 0.1em solid #000;
+  font-family: "Inconsolata", Menlo, Chicago, Geneva;
+}
+.window-pane {
+  overflow-y: scroll;
+  height: 100%;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  /*margin-bottom: 1rem;*/
+}
+.window-pane::-webkit-scrollbar {
+  width: 22px;
+  background-color: #fff;
+}
+.window-pane::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background-color: white;
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  width: 10px;
+  border-left: 4px solid black;
+}
+.window-pane::-webkit-scrollbar-thumb {
+  width: 20px;
+  box-sizing: content-box;
+  background-color: #fff;
+  border: 2px solid black;
+  border-right: none;
+}
+
+.separator {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*padding: 0.4rem 0.8rem;*/
+  border-top: 0.1rem solid black;
+  border-width: 0.1rem 0;
+  font-size: 1rem;
+}
+
+.details__bar {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.4rem 0.8rem;
+  border: 0.1rem solid black;
+  border-width: 0.1rem 0;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+
+/* buttons */
+.btn {
+  min-height: 20px;
+  min-width: 59px;
+  padding: 0 20px;
+  text-align:center;
+  background: white;
+  border-image: url("./icon/button.png") 30 stretch;
+  border: 5.5px solid transparent;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Chicago_12;
+  cursor: pointer;
+}
+
+.btn:active {
+  background: black;
+  border-radius:6px;
+  color: white;
+  font-family: Chicago_12;
+}
+
+.btn:disabled {
+  min-height: 20px;
+  min-width: 59px;
+  text-align:center;
+  background: white;
+  border-image: url("./icon/button.png") 30 stretch;
+  border: 5.5px solid transparent;
+  color: #B6B7B8;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Chicago_12;
+}
+
+input  {
+  border: 1.5px solid black;
+  font-family: Chicago_12;
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+input:focus  {
+  outline:none;
+}
+
+input[type="radio"] + label::before {
+  border-image: svg-load("./icon/radio-border.svg");
+  width: 20px;
+  height: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  background: 0;
+  position: fixed;
+  opacity: 0;
+  border: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  line-height: 13px;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  margin-left: var(--radio-total-width);
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-1 * (var(--radio-total-width-precalc)));
+  display: inline-block;
+  width: var(--radio-width);
+  height: var(--radio-width);
+  margin-right: var(--radio-label-spacing);
+  background: svg-load("./icon/radio-border.svg");
+}
+
+input[type="radio"]:active + label::before {
+  background: svg-load("./icon/radio-border-disabled.svg");
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+  display: block;
+  width: var(--radio-dot-width);
+  height: var(--radio-dot-width);
+  top: var(--radio-dot-top);
+  left: var(--radio-dot-left);
+  position: absolute;
+  background: svg-load("./icon/radio-dot.svg");
+}
+
+input[type="radio"]:focus + label,
+input[type="checkbox"]:focus + label {
+  outline: 1px dotted #000000;
+}
+
+input[type="radio"][disabled] + label::before {
+  background: svg-load("./icon/radio-border-disabled.svg");
+}
+
+input[type="radio"][disabled]:checked + label::after {
+  background: svg-load("./icon/radio-dot-disabled.svg");
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  margin-left: var(--checkbox-total-width);
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * (var(--checkbox-total-width-precalc)));
+  display: inline-block;
+  width: var(--checkbox-width);
+  height: var(--checkbox-width);
+  background: var(--button-highlight);
+  box-shadow: var(--border-field);
+  margin-right: var(--radio-label-spacing);
+}
+
+input[type="checkbox"]:active + label::before {
+  background: var(--surface);
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  display: block;
+  width: var(--checkmark-width);
+  height: var(--checkmark-width);
+  position: absolute;
+  top: var(--checkmark-top);
+  left: calc(
+    -1 * (var(--checkbox-total-width-precalc)) + var(--checkmark-left)
+  );
+  background: svg-load("./icon/checkmark.svg");
+}
+
+input[type="checkbox"][disabled] + label::before {
+  background: var(--surface);
+}
+
+input[type="checkbox"][disabled]:checked + label::after {
+  background: svg-load("./icon/checkmark-disabled.svg");
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  font-family: Chicago_12;
+  font-size: 1em;
+}
+
+[class^="field-row"] + [class^="field-row"] {
+  margin-top: var(--grouped-element-spacing);
+}
+
+.field-row > * + * {
+  margin-left: var(--grouped-element-spacing);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.apple {
+  background: svg-load("./icon/apple.svg");
+  height: 20.7px;
+  width: 17px;
+  background-repeat: no-repeat;
+  border: none;
+  
+}
+
+form {
+  font-family: "Inconsolata", Menlo, Chicago, Geneva;
+  font-size:14px;
+}
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dd-toggle {
+  display: inline-block;
+  padding: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: Chicago_12;
+  font-size: 1em; 
+  
+}
+
+.dd-toggle:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 0; 
+  height: 0; 
+}
+
+.dd-toggle:hover {
+  background-color: black;
+  color: white;
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: var(--box-shadow);
+  border: 2px solid;
+  background-color: #ffffff;
+  list-style-type: none;
+  font-family: Chicago_12;
+  font-size: 1em;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 5px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: black;
+  color: white;
+}
+
+.dd-menu a:hover {
+  background-color: black;
+  color: white;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1.5px dotted #000;
+}
+
+.text-center {
+  text-align: center;
+}

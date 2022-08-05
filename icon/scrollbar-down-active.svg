@@ -1,0 +1,22 @@
+<svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="-0.5" width="21" height="22.38" transform="matrix(1 0 0 -1 0 22.38)" fill="white" stroke="black"/>
+<rect x="1" y="0.37508" width="20" height="2.00043" fill="black"/>
+<rect x="1.375" y="11.0024" width="5.5" height="1.37529" fill="black"/>
+<rect x="6.875" y="5.50117" width="6.875" height="11.0024" fill="black"/>
+<rect x="6.875" y="5.50117" width="5.50118" height="1.375" transform="rotate(90 6.875 5.50117)" fill="black"/>
+<rect x="9.625" y="17.8788" width="1.37529" height="1.375" transform="rotate(90 9.625 17.8788)" fill="black"/>
+<rect x="11" y="19.2541" width="1.37529" height="1.375" transform="rotate(90 11 19.2541)" fill="black"/>
+<rect x="19.25" y="11.0024" width="1.37529" height="1.375" transform="rotate(90 19.25 11.0024)" fill="black"/>
+<rect x="17.875" y="12.3776" width="1.37529" height="4.125" transform="rotate(90 17.875 12.3776)" fill="black"/>
+<rect x="16.5" y="13.7529" width="1.37529" height="2.75" transform="rotate(90 16.5 13.7529)" fill="black"/>
+<rect x="15.125" y="15.1282" width="1.37529" height="1.375" transform="rotate(90 15.125 15.1282)" fill="black"/>
+<rect x="13.75" y="16.5035" width="1.37529" height="1.375" transform="rotate(90 13.75 16.5035)" fill="black"/>
+<rect x="12.375" y="17.8788" width="1.37529" height="2.75" transform="rotate(90 12.375 17.8788)" fill="black"/>
+<rect x="12.375" y="16.5035" width="1.37529" height="5.5" transform="rotate(90 12.375 16.5035)" fill="black"/>
+<rect x="6.875" y="15.1282" width="1.37529" height="1.375" transform="rotate(90 6.875 15.1282)" fill="black"/>
+<rect x="6.875" y="13.7529" width="1.37529" height="2.75" transform="rotate(90 6.875 13.7529)" fill="black"/>
+<rect x="6.875" y="12.3776" width="1.37529" height="4.125" transform="rotate(90 6.875 12.3776)" fill="black"/>
+<rect x="2.75" y="11.0024" width="1.37529" height="1.375" transform="rotate(90 2.75 11.0024)" fill="black"/>
+<rect x="15.125" y="5.50117" width="5.50118" height="1.375" transform="rotate(90 15.125 5.50117)" fill="black"/>
+<rect x="13.75" y="11.0024" width="5.5" height="1.37529" fill="black"/>
+</svg>
