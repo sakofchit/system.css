@@ -3,6 +3,12 @@
   src: url("fonts/FindersKeepers.ttf")
 }
 
+@font-face {
+  font-family: Chicago_12;
+  src: url("fonts/ChiKareGo2.ttf"); 
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -10,11 +16,10 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 main {
-  width: 95rem;
+  width: 90rem;
   margin-left: 240px;
   margin-bottom: 60px;
   margin-top: 25px;
@@ -23,7 +28,6 @@ main {
 .container{
   width: 80%;
 }
-
 
 
 aside {
@@ -76,6 +80,19 @@ h3 {
   vertical-align: center;
 }
 
+.modal-text, .alert-text {
+  font-family: Chicago_12;
+  font-size: 1.2em;
+  margin-top: 10px;
+  vertical-align: center;
+}
+
+.modeless-text {
+  font-family: Chicago_12;
+  font-size: 1em;
+  vertical-align: center;
+}
+
 
 p {
   font-family: Geneva;
@@ -110,10 +127,21 @@ pre {
   font-size: 13px;
 }
 
+.modal-dialog {
+  width: 50%;
+}
 
 .btn.active {
   background: black;
   border-radius:6px;
   color: white;
   font-family: Chicago_12;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1.5px solid black;
+  padding-right: 46px;
 }

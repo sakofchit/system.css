@@ -156,16 +156,13 @@ h2 {
   font-size: 2em;
 }
 
+/* buttons */
+
 .standard-button {
   display: block;
   min-width: 59px;
   min-height: 20px;
 }
-
-/*p {
-  font-family: Monaco;
-  font-size: 22px;
-}*/
 
 /* dialogs */
 
@@ -174,6 +171,22 @@ h2 {
   padding: 10px;
   box-shadow: var(--box-shadow);
   background-color: white;
+}
+
+.modal-dialog, .alert-box {
+  width: auto;
+  padding: 13px;
+}
+
+.modal-contents, .alert-contents {
+  padding: 10px;
+}
+
+.modeless-dialog {
+  height: 100%;
+  padding: 0.5rem 0.5rem;
+  font-size: 18px;
+  letter-spacing: -0.025em;
 }
 
 .inner-border {
@@ -336,7 +349,7 @@ h2 {
   font-size: 1rem;
 }
 
-.details__bar {
+.details-bar {
   flex: none;
   display: flex;
   flex-direction: row;
