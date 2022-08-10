@@ -9,9 +9,52 @@ Fortunately, this library does not use any JavaScript and is compatible with any
 There's a couple ways you can get started with System.css!
 
 **Import from CDN**
+
 Here's some starter code to help you get started:
 
-    enter code here
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>System.css Starter</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css@0.1.0/dist/system.css" />
+    </head>
+    <body>
+        <div class="window" style="width:30rem;">
+            <div class="title-bar"> 
+                <button class="close"></button>
+                <h1 class="title">System.css</h1>
+                <button class="resize"></button>
+            </div>
+            <div class="separator"></div>
+            
+            <div class="window-pane">
+                Hello world!
+            </div>
+        </div>
+
+        <div class="window" style="width:30rem;">
+            <div class="title-bar"> 
+              <button class="close"></button>
+              <h1 class="title">Search</h1>
+              <button class="hidden"></button>
+            </div>
+            <div class="separator"></div>
+            
+            <div class="modeless-dialog">
+              <section class="field-row" style="justify-content: flex-start">
+                <p class="modeless-text">Find:</p>
+                <input type="text" style="width:100%;" placeholder=""/>
+          
+              </section>
+              <section class="field-row" style="justify-content: flex-end">
+                <button class="btn">Cancel</button>
+                <button class="btn" style="width:95px;">Find</button>
+              </section>
+            </div>
+          </div>
+    </body>
+    </html>
 
 **Import from [npmjs](https://www.npmjs.com/package/@sakun/system.css)**
 
