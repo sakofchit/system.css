@@ -23,12 +23,25 @@
       </div>
       <div class="separator"></div>
       <div class="window-pane">
-        <ul class="files">
-          <li>Intro</li>
-          <li>Buttons</li>
+        <ul class="menu-items">
+          <a href="#intro"><li>Intro</li></a>
+          <li>Components</li>
+            <ul>
+              <a href="#buttons"><li>Buttons</li></a>
+              <a href="#radio-buttons"><li>Radio Buttons</li></a>
+              <a href="#checkboxes"><li>Checkboxes</li></a>
+              <a href="#dialogs"><li>Dialogs</li></a>
+              <a href="#dropdown"><li>Dropdown</li></a>
+              <a href="#text-box"><li>Text Box</li></a>
+            </ul>
+            <br>
           <li>Windows</li>
-          <li>Typography</li>
-          <li>Contributing</li>
+          <ul>
+            <a href="#title-bar"><li>Title Bar</li></a>
+            <a href="#window-contents"><li>Window Contents</li></a>
+          </ul>
+          <br>
+          <a href="#contributing"><li>Contributing, Credits, etc.</li></a>
 
         </ul>
       </div>
@@ -42,12 +55,10 @@
       <p class="heading center">System.css</p>
         <p class="desc center">A design system for building retro <img class="apple"> inspired interfaces</p>
   
-      <h2 class="subheading">Intro</h2>
+      <h2 class="subheading" id="intro">Intro</h2>
         <p>System.css is a CSS library for building interfaces that resemble Apple's System OS which ran from 1984-1991. Design-wise, not much really changed from System 1 to System 6; however this library is based on System 6 as it was the final monochrome version of MacOS.</p>
   
         <p>Fortunately, this library does not use any JavaScript and is compatible with any front-end framework of your choice. Most styles can also be overwritten to allow for deeper customization.</p>
-  
-        <h3 class="subheading">Usage</h3>
   
         <h2 class="subheading">Components</h2>
   
@@ -59,7 +70,7 @@
               <footer>&mdash; Apple HI Guidelines, p. 204</footer>
             </blockquote>
   
-            <p>A standard button measures 59px wide and 20px tall. We use the <code>btn</code> class for these buttons</p>
+            <p>A standard button measures 59px wide and 20px tall. We use the <code>.btn</code> class for these buttons</p>
 
             <%- example(`
 
@@ -106,7 +117,7 @@
         </section>
 
         <section class="component">
-          <h3 class="subheading" id="textbox">Radio Buttons</h3>
+          <h3 class="subheading" id="radio-buttons">Radio Buttons</h3>
           <div style="padding-left: 20px;">
             <blockquote>
               A radio button is a Macintosh control that displays a setting, either on or off, and is part of a group in which only one button can be on at a time.
@@ -134,6 +145,37 @@
             
           </div>
         </section>
+
+        <section class="component">
+          <h3 class="subheading" id="checkboxes">Checkboxes</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              Checkboxes, like radio buttons, provide alternative choices for users. A
+              checkbox is a square with label text next to it
+              <footer>&mdash; Apple HI Guidelines, p. 211</footer>
+            </blockquote>
+  
+            <p>Checkboxes can be rendered by specifying a <code>checkbox</code> type on an <code>input</code> tag and assigning it a name.</p>
+
+            <%- example(`
+              <div class="field-row">
+                <input id="checkbox${getNewId()}" type="checkbox" name="chbx-example">
+                <label for="checkbox${getCurrentId()}">Left</label>
+              </div>
+              <div class="field-row">
+                <input id="checkbox${getNewId()}" type="checkbox" name="chbx-example">
+                <label for="checkbox${getCurrentId()}">Center</label>
+              </div>
+              <div class="field-row">
+                <input id="checkbox${getNewId()}" type="checkbox" name="chbx-example">
+                <label for="checkbox${getCurrentId()}">Right</label>
+            </div>
+            
+            `)%>
+
+            
+          </div>
+        </section>
   
         <section class="component">
           <h3 class="subheading" id="dialogs">Dialogs</h3>
@@ -145,55 +187,17 @@
             </blockquote>
   
             <p>
-              A basic dialog is just a box with text in it.
+              A basic dialog is just a box with text in it. We use the <code>.standard-dialog</code> class here.
             </p>
 
             <%- example(`
             
-            <div class="standard-dialog center">
+            <div class="standard-dialog center" style="width:50%;">
               <p class="dialog-text">The Macintosh Finder, Version 1.0 (18 Jan 84)</p>
               <p class="dialog-text">&copy; 1984 Apple Computer</p>
             </div>
             
             
-            `)%>
-
-            <p>
-              We can also have a modal dialog box, which typically has some interactive component within it.
-            </p>
-
-            <%- example(`
-            <div class="modal-dialog outer-border">
-              <div class="inner-border center">
-
-                <div class="modal-contents">
-                  <p class="modal-text">Modal Dialog</p>
-                  <div style="padding-left: 20px;">
-                    <div class="field-row">
-                      <input id="radio4" type="radio" name="second-example">
-                      <label for="radio4">Room</label>
-                    </div>
-                    <div class="field-row">
-                      <input id="radio5" type="radio" name="second-example">
-                      <label for="radio5">For</label>
-                    </div>
-                    <div class="field-row">
-                      <input id="radio6" type="radio" name="second-example">
-                      <label for="radio6">Stuff</label>
-                    </div>
-                    
-                  </div>
-
-                  <section class="field-row" style="justify-content: flex-end">
-                    <button class="btn">Cancel</button>
-                    <button class="btn" style="width:95px;">OK</button>
-                  </section>
-                
-                </div>
-
-                
-              </div>
-            </div>
             `)%>
 
             <p>
@@ -223,6 +227,44 @@
               </div>
             </div>
             `)%>
+
+            <p>
+              We can also have a modal dialog box, which typically has some interactive component within it. It has a double-outline border. We achieve this by using a nested <code>div</code>. The outer <code>div</code> uses the <code>.outer-border</code> class and the <code>.inner-border</code>
+            </p>
+
+            <%- example(`
+            <div class="modal-dialog outer-border">
+              <div class="inner-border center">
+
+                <div class="modal-contents">
+                  <p class="modal-text">Modal Dialog</p>
+                  <div style="padding-left: 20px;">
+                    <div class="field-row">
+                      <input id="radio${getNewId()}" type="radio" name="second-example">
+                      <label for="radio${getCurrentId()}">Room</label>
+                    </div>
+                    <div class="field-row">
+                      <input id="radio${getNewId()}" type="radio" name="second-example">
+                      <label for="radio${getCurrentId()}">For</label>
+                    </div>
+                    <div class="field-row">
+                      <input id="radio${getNewId()}" type="radio" name="second-example">
+                      <label for="radio${getCurrentId()}">Stuff</label>
+                    </div>
+                    
+                  </div>
+
+                  <section class="field-row" style="justify-content: flex-end">
+                    <button class="btn">Cancel</button>
+                    <button class="btn" style="width:95px;">OK</button>
+                  </section>
+                
+                </div>
+
+                
+              </div>
+            </div>
+            `)%>
   
   
             <blockquote>
@@ -233,16 +275,17 @@
               <footer>&mdash; Apple HI Guidelines, p. 176</footer>
             </blockquote>
 
-            <p>Alert boxes also have a double-outline frame. T</p>
+            <p>Like modal dialogs, alert boxes also have a double-outline frame. The empty square is where you'd place an icon.</p>
 
             <%- example(`
             <div class="alert-box outer-border"  style="width:30rem;">
               <div class="inner-border">
 
-                <div class="alert-contents" style="padding-left: 30px; padding-right:30px;">
+                <div class="alert-contents" style="padding-left: 30px; padding-right:20px;">
                   <section class="field-row" style="justify-content: flex-start">
                     <div class="square"></div>
-                    <p class="alert-text" style="padding-left:10px;">This is a standard alert box. The text would be placed here. This is where more text appears</p>
+                    <p class="alert-text" style="padding-left:10px;">This is a standard alert box. The text would be placed here. 
+                      This is where more text appears</p>
                   </section>
 
                   <section class="field-row" style="justify-content: flex-end">
@@ -354,7 +397,7 @@
         </section>
   
         <section class="component">
-          <h3 class="subheading" id="textbox">Text Box</h3>
+          <h3 class="subheading" id="text-box">Text Box</h3>
           <div style="padding-left: 20px;">
             <blockquote>
               The place or places in a dialog box where information can be typed. Also called text entry field.
@@ -460,7 +503,7 @@
   
   
         <section class="component">
-          <h3 class="subheading" id="title-bar">Window Contents</h3>
+          <h3 class="subheading" id="window-contents">Window Contents</h3>
           <div style="padding-left: 20px;">
   
             <blockquote>
@@ -468,7 +511,7 @@
               <footer>&mdash; Apple HI Guidelines, p. 134</footer>
             </blockquote>
   
-            <p>This is a window (without stuff in it)</p>
+            <p>This is a window (without stuff in it). To create a basic window, we simply use the <code>.window</code> class.</p>
 
             <%- example(`
             
@@ -554,14 +597,14 @@
   
         <section class="component">
           <div>
-            <p>Thanks for checking this project out! This library was made in good fun and was largely inspired by <a href="https://github.com/jdan/98.css">98.css</a>.</p>
+            <p>Thanks for checking this project out! This library was made in good fun and was largely inspired by <a href="https://github.com/jdan/98.css" target="_blank">98.css</a>. The <a href="http://www.suppertime.co.uk/blogmywiki/2017/04/chicago/" target="_blank">Chicago 12pt</a> and <a href="http://www.suppertime.co.uk/blogmywiki/2017/04/finderskeepers/" target="_blank">Geneva 9pt</a> fonts are recreations by <a href="https://twitter.com/blogmywiki" target="_blank">@blogmywiki</a></p>
   
-            <p>It's also still in beta! I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found here.</p>
+            <p>System.css is still in beta! I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found <a href="https://github.com/sakofchit/system.css/tree/main/icon">here</a>.</p>
               
               
             <p>If you find a bug, consider opening an issue here. If there's something that you'd like to add, please feel free to create a PR!</p>
   
-            <p>If you'd like to see what else I'm up to, consider following me on <a href="https://twitter.com/sakofchit">Twitter</a> or checking out my <a href="https://sakun.co">personal site</a> :)</p>
+            <p>If you'd like to see what else I'm up to, consider following me on <a href="https://twitter.com/sakofchit" target="_blank">Twitter</a> or checking out my <a href="https://sakun.co" target="_blank">personal site</a> :)</p>
           </div>
         </section>
     </div>

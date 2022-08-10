@@ -32,9 +32,9 @@
     var(--radio-label-spacing);
   --checkbox-total-width: calc(var(--checkbox-total-width-precalc));
   --checkbox-left: calc(-1 * var(--checkbox-total-width-precalc));
-  --checkmark-width: 7px;
-  --checkmark-top: 3px;
-  --checkmark-left: 3px;
+  --checkmark-width: 13px;
+  --checkmark-top: 1.5px;
+  --checkmark-left: 1.5px;
 }
 
 @font-face {
@@ -417,6 +417,12 @@ input[type="radio"] + label::before {
   height: 20px;
 }
 
+input[type="checkbox"] + label::before {
+  border: 1.5px solid black;
+  width: 20px;
+  height: 20px;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   appearance: none;
@@ -432,6 +438,7 @@ input[type="checkbox"] {
 input[type="radio"] + label,
 input[type="checkbox"] + label {
   line-height: 13px;
+  padding-left: 5px;
 }
 
 input[type="radio"] + label {
@@ -451,9 +458,6 @@ input[type="radio"] + label::before {
   background: svg-load("./icon/radio-border.svg");
 }
 
-input[type="radio"]:active + label::before {
-  background: svg-load("./icon/radio-border-disabled.svg");
-}
 
 input[type="radio"]:checked + label::after {
   content: "";
@@ -464,19 +468,6 @@ input[type="radio"]:checked + label::after {
   left: var(--radio-dot-left);
   position: absolute;
   background: svg-load("./icon/radio-dot.svg");
-}
-
-input[type="radio"]:focus + label,
-input[type="checkbox"]:focus + label {
-  outline: 1px dotted #000000;
-}
-
-input[type="radio"][disabled] + label::before {
-  background: svg-load("./icon/radio-border-disabled.svg");
-}
-
-input[type="radio"][disabled]:checked + label::after {
-  background: svg-load("./icon/radio-dot-disabled.svg");
 }
 
 input[type="checkbox"] + label {
@@ -496,10 +487,6 @@ input[type="checkbox"] + label::before {
   margin-right: var(--radio-label-spacing);
 }
 
-input[type="checkbox"]:active + label::before {
-  background: var(--surface);
-}
-
 input[type="checkbox"]:checked + label::after {
   content: "";
   display: block;
@@ -511,7 +498,9 @@ input[type="checkbox"]:checked + label::after {
     -1 * (var(--checkbox-total-width-precalc)) + var(--checkmark-left)
   );
   background: svg-load("./icon/checkmark.svg");
+  background-repeat: no-repeat;
 }
+
 
 input[type="checkbox"][disabled] + label::before {
   background: var(--surface);
