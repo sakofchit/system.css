@@ -8,7 +8,13 @@ Fortunately, this library does not use any JavaScript and is compatible with any
 ## Getting Started
 There's a couple ways you can get started with System.css!
 
-**Import from CDN**
+**Import from CDN (easiest)**
+
+Add the following to your head tag:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css@0.1.0/dist/system.css" />
+```
 
 Here's some starter code to help you get started:
 ```html
@@ -56,16 +62,24 @@ Here's some starter code to help you get started:
 </body>
 </html>
 ```
+
 **Import from [npmjs](https://www.npmjs.com/package/@sakun/system.css)**
 
     npm i @sakun/system.css
+
+## Developing
+
+1. Clone the repository and run ```npm install```
+2. Run ```npm start``` to start the development environment.
+
+Everything you'll need can be found in [style.css](https://github.com/sakofchit/system.css/blob/main/style.css).
 
 
 ## Contributing, Credits, etc.
 
 Thanks for checking this project out! This library was made in good fun and was largely inspired by [98.css](https://github.com/jdan/98.css). The Chicago 12pt and Geneva 9pt fonts are recreations by [@blogmywiki](https://twitter.com/blogmywiki)
 
- System.css is still in beta! I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found here.
+ System.css is still in beta! I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found [here](https://github.com/sakofchit/system.css/tree/main/icon).
 
 If you find a bug, consider opening an issue. If there's something that you'd like to add, please feel free to create a PR!
 
