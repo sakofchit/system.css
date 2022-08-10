@@ -11,7 +11,7 @@ There's a couple ways you can get started with System.css!
 **Import from CDN**
 
 Here's some starter code to help you get started:
-
+```html
     <!DOCTYPE html>
     <html>
     <head>
@@ -55,7 +55,7 @@ Here's some starter code to help you get started:
           </div>
     </body>
     </html>
-
+```
 **Import from [npmjs](https://www.npmjs.com/package/@sakun/system.css)**
 
     npm i @sakun/system.css
