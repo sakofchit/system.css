@@ -8,13 +8,10 @@
 
   /* Spacing */
   --element-spacing: 8px;
-  --grouped-button-spacing: 4px;
   --grouped-element-spacing: 6px;
   --radio-width: 12px;
   --checkbox-width: 13px;
   --radio-label-spacing: 6px;
-  --range-track-height: 4px;
-  --range-spacing: 10px;
 
   /* Some detailed computations for radio buttons and checkboxes (from 98.css) */
   --radio-total-width-precalc: var(--radio-width) + var(--radio-label-spacing);
@@ -157,15 +154,13 @@ h2 {
 }
 
 /* buttons */
-
 .standard-button {
   display: block;
   min-width: 59px;
   min-height: 20px;
 }
 
-/* dialogs */
-
+/* dialogs & modals */
 .standard-dialog {
   border: 2px solid;
   padding: 10px;
@@ -400,6 +395,7 @@ h2 {
   font-family: Chicago_12;
 }
 
+/* text input */
 input  {
   border: 1.5px solid black;
   font-family: Chicago_12;
@@ -525,19 +521,6 @@ input[type="checkbox"][disabled]:checked + label::after {
   margin-left: var(--grouped-element-spacing);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .apple {
   background: svg-load("./icon/apple.svg");
   height: 20.7px;
@@ -547,13 +530,13 @@ input[type="checkbox"][disabled]:checked + label::after {
   
 }
 
+/* Form */
 form {
   font-family: "Inconsolata", Menlo, Chicago, Geneva;
   font-size:14px;
 }
 
 /* Dropdown */
-
 .dropdown {
   display: inline-block;
   position: relative;
@@ -629,8 +612,4 @@ form {
 .dd-menu li.divider{
   padding: 0;
   border-bottom: 1.5px dotted #000;
-}
-
-.text-center {
-  text-align: center;
 }
