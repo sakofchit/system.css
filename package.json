@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "node build.js",
-    "deploy:docs": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "release": "npm run build && npm publish"
   },
   "repository": {
