@@ -1,0 +1,152 @@
+@font-face {
+  font-family: Geneva9;
+  src: url("fonts/FindersKeepers.ttf")
+}
+
+@font-face {
+  font-family: Chicago_12;
+  src: url("fonts/ChiKareGo2.ttf"); 
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 90rem;
+  margin-left: 240px;
+  margin-bottom: 60px;
+  margin-top: 25px;
+}
+
+.container{
+  width: 80%;
+}
+
+
+aside {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 8px;
+  display: flex;
+  align-items: stretch;
+}
+
+html {
+  font-family: "Inconsolata", Menlo, Chicago, Geneva;
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  min-height: 100vh;
+}
+
+h3 {
+  font-family: Chicago;
+  font-size: 1.5em;
+}
+
+.heading {
+  font-size: 3rem;
+}
+
+.desc {
+  font-family: Geneva_9;
+  font-size: 2em;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.component {
+  display: flex;
+  margin-top: 24px;
+  font-family: Geneva;
+  font-size: 1em;
+}
+
+.dialog-text {
+  font-family: Chicago_12;
+  font-size: 1em;
+  margin-top: 20px;
+  vertical-align: center;
+}
+
+.modal-text, .alert-text {
+  font-family: Chicago_12;
+  font-size: 1.2em;
+  margin-top: 10px;
+  vertical-align: center;
+}
+
+.modeless-text {
+  font-family: Chicago_12;
+  font-size: 1em;
+  vertical-align: center;
+}
+
+
+p {
+  font-family: Geneva;
+  font-size: 0.9em;
+}
+
+
+blockquote {
+  margin: 0 0 20px;
+  padding: 20px;
+  width: 80%;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+blockquote footer {
+  margin: 12px 0 0 12px;
+}
+
+.example {
+  margin: 16px;
+  padding: 12px 24px;
+  border-left: 1px solid #000000;
+}
+
+summary {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+pre {
+  font-size: 13px;
+}
+
+.modal-dialog {
+  width: 50%;
+}
+
+.btn.active {
+  background: black;
+  border-radius:6px;
+  color: white;
+  font-family: Chicago_12;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1.5px solid black;
+  padding-right: 46px;
+}
+
+.menu-items {
+  padding: 0;
+  font-size: 14px;
+}
