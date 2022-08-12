@@ -454,6 +454,9 @@ input[type="radio"] + label::before {
   background: svg-load("./icon/radio-border.svg");
 }
 
+input[type="radio"]:focus-visible + label::before {
+  background-image: svg-load("./icon/radio-border-focused.svg");
+}
 
 input[type="radio"]:checked + label::after {
   content: "";
