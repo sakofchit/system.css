@@ -563,6 +563,7 @@ form {
   height: 0; 
 }
 
+.dd-toggle:focus,
 .dd-toggle:hover {
   background-color: black;
   color: white;
@@ -580,14 +581,6 @@ form {
   font-family: Chicago_12;
   font-size: 1em;
 }
-
-.dd-input + .dd-menu {
-  display: none;
-} 
-
-.dd-input:checked + .dd-menu {
-  display: block;
-} 
 
 .dd-menu li {
   padding: 5px 20px;
