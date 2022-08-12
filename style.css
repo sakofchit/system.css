@@ -573,6 +573,7 @@ form {
 .dd-toggle:hover {
   background-color: black;
   color: white;
+  outline: none;
 }
 
 .dd-menu {
