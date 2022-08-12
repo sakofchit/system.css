@@ -609,3 +609,8 @@ form {
   padding: 0;
   border-bottom: 1.5px dotted #000;
 }
+
+/* styles specific to demo page */
+.menu-items li ul {
+  margin-bottom: 1rem;
+}
