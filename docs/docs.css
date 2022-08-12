@@ -77,20 +77,20 @@ h3 {
   font-family: Chicago_12;
   font-size: 1em;
   margin-top: 20px;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .modal-text, .alert-text {
   font-family: Chicago_12;
   font-size: 1.2em;
   margin-top: 10px;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 .modeless-text {
   font-family: Chicago_12;
   font-size: 1em;
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 
