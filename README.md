@@ -30,9 +30,9 @@ Here's some starter code to help you get started:
 <body>
     <div class="window" style="width:30rem;">
         <div class="title-bar"> 
-            <button class="close"></button>
+            <button aria-label="Close" class="close"></button>
             <h1 class="title">System.css</h1>
-            <button class="resize"></button>
+            <button aria-label="Resize" class="resize"></button>
         </div>
         <div class="separator"></div>
         
@@ -43,9 +43,9 @@ Here's some starter code to help you get started:
 
     <div class="window" style="width:30rem;">
         <div class="title-bar"> 
-            <button class="close"></button>
+            <button aria-label="Close" class="close"></button>
             <h1 class="title">Search</h1>
-            <button class="hidden"></button>
+            <button aria-label="Resize" disabled class="hidden"></button>
         </div>
         <div class="separator"></div>
         
