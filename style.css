@@ -534,6 +534,8 @@ input[type="checkbox"][disabled]:checked + label::after {
   width: 18px;
   background-repeat: no-repeat;
   border: none;
+  display: inline-block;
+  margin-right: 2px;
 }
 
 /* Form */
