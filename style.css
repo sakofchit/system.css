@@ -17,7 +17,7 @@
   --radio-total-width-precalc: var(--radio-width) + var(--radio-label-spacing);
   --radio-total-width: calc(var(--radio-total-width-precalc));
   --radio-left: calc(-1 * var(--radio-total-width-precalc));
-  --radio-dot-width: 6.13px;
+  --radio-dot-width: 6px;
   --radio-dot-top: calc(var(--radio-width) / 2 - var(--radio-dot-width) / 2);
   --radio-dot-left: calc(
     -1 * (var(--radio-total-width-precalc)) + var(--radio-width) / 2 - var(
@@ -29,9 +29,9 @@
     var(--radio-label-spacing);
   --checkbox-total-width: calc(var(--checkbox-total-width-precalc));
   --checkbox-left: calc(-1 * var(--checkbox-total-width-precalc));
-  --checkmark-width: 13px;
-  --checkmark-top: 1.5px;
-  --checkmark-left: 1.5px;
+  --checkmark-width: 12px;
+  --checkmark-top: 2px;
+  --checkmark-left: 2px;
 }
 
 @font-face {
@@ -530,11 +530,10 @@ input[type="checkbox"][disabled]:checked + label::after {
 
 .apple {
   background: svg-load("./icon/apple.svg");
-  height: 20.7px;
-  width: 17px;
+  height: 22px;
+  width: 18px;
   background-repeat: no-repeat;
   border: none;
-  
 }
 
 /* Form */
