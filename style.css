@@ -179,7 +179,7 @@ h2 {
 
 .modeless-dialog {
   height: 100%;
-  padding: 0.5rem 0.5rem;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   font-size: 18px;
   letter-spacing: -0.025em;
 }
