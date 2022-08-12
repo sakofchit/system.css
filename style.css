@@ -483,6 +483,10 @@ input[type="checkbox"] + label::before {
   margin-right: var(--radio-label-spacing);
 }
 
+input[type="checkbox"]:focus-visible + label::before {
+  outline: 1px solid black;
+}
+
 input[type="checkbox"]:checked + label::after {
   content: "";
   display: block;
