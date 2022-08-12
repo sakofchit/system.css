@@ -86,3 +86,7 @@ Thanks for checking this project out! This library was made in good fun and was 
 If you find a bug, consider opening an issue. If there's something that you'd like to add, please feel free to create a PR!
 
 If you'd like to see what else I'm up to, consider following me on [Twitter](https://twitter.com/sakofchit) or checking out my [personal site](https://sakun.co) :)
+
+## Sponsors
+
+[CSS Scan](https://getcssscan.com/?ref=systemcss): The fastest and easiest way to check, copy and edit CSS
