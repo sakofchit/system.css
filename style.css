@@ -611,6 +611,6 @@ form {
 }
 
 /* styles specific to demo page */
-.menu-items li ul {
+.menu-items > li {
   margin-bottom: 1rem;
 }
