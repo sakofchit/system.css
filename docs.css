@@ -38,6 +38,7 @@ aside {
   padding: 8px;
   display: flex;
   align-items: stretch;
+  z-index:2;
 }
 
 html {
