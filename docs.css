@@ -73,26 +73,23 @@ h3 {
   font-size: 1em;
 }
 
-.dialog-text {
-  font-family: Chicago_12;
-  font-size: 1em;
-  margin-top: 20px;
-  vertical-align: center;
-}
-
-.modal-text, .alert-text {
-  font-family: Chicago_12;
-  font-size: 1.2em;
-  margin-top: 10px;
-  vertical-align: center;
-}
-
+.alert-text,
+.dialog-text,
+.modal-text,
 .modeless-text {
   font-family: Chicago_12;
   font-size: 1em;
-  vertical-align: center;
+  font-weight: normal;
 }
 
+.dialog-text {
+  margin-top: 20px;
+}
+
+.modal-text, .alert-text {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
 
 p {
   font-family: Geneva;

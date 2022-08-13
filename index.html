@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>system.css | A design system for building retro Apple-inspired interfaces</title>
   <link rel="Shortcut Icon" type="image/x-icon" href="icon.png" />
@@ -17,38 +17,36 @@
   <aside>
     <div class="window">
       <div class="title-bar"> 
-        <button class="close"><span class="hidden">Close</span></button>
+        <button aria-label="Close" class="close"></button>
         <h1 class="title">Docs</h1>
-        <button class="resize"><span class="hidden">Resize</span></button>
+        <button aria-label="Resize" class="resize"></button>
       </div>
       <div class="separator"></div>
       <div class="window-pane">
         <ul class="menu-items">
-          <a href="#intro"><li>Intro</li></a>
-          <li>Components</li>
+          <li><a href="#intro">Intro</a></li>
+          <li>Components
+              <ul>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#radio-buttons">Radio Buttons</a></li>
+                <li><a href="#checkboxes">Checkboxes</a></li>
+                <li><a href="#dropdown">Dropdown</a></li>
+                <li><a href="#text-box">Text Box</a></li>
+              </ul>
+            </li>
+          <li>Windows
             <ul>
-              <a href="#buttons"><li>Buttons</li></a>
-              <a href="#radio-buttons"><li>Radio Buttons</li></a>
-              <a href="#checkboxes"><li>Checkboxes</li></a>
-              <a href="#dropdown"><li>Dropdown</li></a>
-              <a href="#text-box"><li>Text Box</li></a>
+              <li><a href="#title-bar">Title Bar</a></li>
+              <li><a href="#window-contents">Window Contents</a></li>
+              <li><a href="#dialogs">Dialogs</a></li>
             </ul>
-            <br>
-          <li>Windows</li>
-          <ul>
-            <a href="#title-bar"><li>Title Bar</li></a>
-            <a href="#window-contents"><li>Window Contents</li></a>
-            <a href="#dialogs"><li>Dialogs</li></a>
-          </ul>
-          <br>
-          <a href="#contributing"><li>Contributing, Credits, etc.</li></a>
-
-          <br>
-          <li>Sponsors</li>
+          </li>
+          <li><a href="#contributing">Contributing, Credits, etc.</a></li>
+          <li>Sponsors
             <ul>
-              <a href="https://getcssscan.com/?ref=systemcss" target="_blank"><li>Get CSS Scan browser extension</li></a>
+              <li><a href="https://getcssscan.com/?ref=systemcss" target="_blank">Get CSS Scan browser extension</a></li>
             </ul>
-
+          </li>
         </ul>
       </div>
     </div>
@@ -59,7 +57,7 @@
   <div class="container">
     <div class="standard-dialog">
       <p class="heading center">System.css</p>
-        <p class="desc center">A design system for building retro <img class="apple">-inspired interfaces</p>
+        <p class="desc center">A design system for building retro <span role="img" class="apple" aria-label="Apple"></span>-inspired interfaces</p>
   
       <h2 class="subheading" id="intro">Intro</h2>
         <p>System.css is a CSS library for building interfaces that resemble Apple's System OS which ran from 1984-1991. Design-wise, not much really changed from System 1 to System 6; however this library is based on System 6 as it was the final monochrome version of MacOS.</p>
@@ -91,10 +89,10 @@
             <p>When pressed, buttons invert. The button below is stimulated to be in the active state.</p>
 
             <div class="example">
-      <button class="btn active" class="btn">Active</button>
+      <button class="btn active">Active</button>
       <details>
         <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> &gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
       </details>
     </div>
   
@@ -231,14 +229,12 @@
             <p>Apply the <code>dd-toggle</code> class to what you want to serve as a dropdown</p>
   
             <div class="example">
-      <label class="dropdown">
+      <details class="dropdown">
 
-  <div class="dd-toggle">
+  <summary class="dd-toggle">
     File
-  </div>
-
-  <input type="checkbox" class="dd-input" id="test">
-
+  </summary>
+              
   <ul class="dd-menu">
     <li>Action</li>
     <li>Another action</li>
@@ -249,15 +245,13 @@
     </li>
   </ul>
   
-</label>
+</details>
 
-<label class="dropdown">
+<details class="dropdown">
 
-  <div class="dd-toggle">
+  <summary class="dd-toggle">
     Edit
-  </div>
-
-  <input type="checkbox" class="dd-input" id="test">
+  </summary>
 
   <ul class="dd-menu">
     <li>Woah</li>
@@ -270,15 +264,13 @@
     </li>
   </ul>
   
-</label>
+</details>
 
-<label class="dropdown">
+<details class="dropdown">
 
-  <div class="dd-toggle">
+  <summary class="dd-toggle">
     View
-  </div>
-
-  <input type="checkbox" class="dd-input" id="test">
+  </summary>
 
   <ul class="dd-menu">
     <li>Action</li>
@@ -290,15 +282,13 @@
     </li>
   </ul>
   
-</label>
+</details>
 
-<label class="dropdown">
+<details class="dropdown">
 
-  <div class="dd-toggle">
+  <summary class="dd-toggle">
     Special
-  </div>
-
-  <input type="checkbox" class="dd-input" id="test">
+  </summary>
 
   <ul class="dd-menu">
     <li>You probably</li>
@@ -307,17 +297,15 @@
     <li>Idea</li>
   </ul>
   
-</label>
+</details>
       <details>
         <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
     File
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;test&quot;</span>&gt;</span>
-
+  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+              
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -328,15 +316,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   
-<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
     Edit
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;test&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Woah<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -349,15 +335,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   
-<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
     View
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;test&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -369,15 +353,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   
-<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
     Special
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;test&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>You probably<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -386,7 +368,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Idea<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   
-<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></code></pre>
       </details>
     </div>
   
@@ -404,10 +386,10 @@
             <p>Text Boxes can be rendered by specifying a <code>text</code> type on an <code>input</code> tag</p>
 
             <div class="example">
-      <input type="text" placeholder="some cool text"/>
+      <input aria-label="Example text box" type="text" placeholder="some cool text"/>
       <details>
         <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;some cool text&quot;</span>/&gt;</span></code></pre>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Example text box&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;some cool text&quot;</span>/&gt;</span></code></pre>
       </details>
     </div>
   
@@ -415,18 +397,18 @@
 
             <div class="example">
       <form>
-  <label for="email">Email</label><br>
-  <input type="email" placeholder="panic@thedis.co"/><br>
-  <label for="password">Password</label><br>
-  <input type="password" placeholder="password"/><br><br>
+  <label for="text_email">Email</label><br>
+  <input id="text_email" type="email" placeholder="panic@thedis.co"/><br>
+  <label for="text_pwd">Password</label><br>
+  <input id="text_pwd" type="password" placeholder="password"/><br><br>
 </form>
       <details>
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;email&quot;</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;panic@thedis.co&quot;</span>/&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;password&quot;</span>/&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;text_email&quot;</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;text_email&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;panic@thedis.co&quot;</span>/&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;text_pwd&quot;</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;text_pwd&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;password&quot;</span>/&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre>
       </details>
     </div>
@@ -463,18 +445,18 @@
             <div class="example">
       <div class="window">
   <div class="title-bar"> 
-    <button class="close"></button>
+    <button aria-label="Close" class="close"></button>
     <h1 class="title">A Title Bar</h1>
-    <button class="hidden"></button>
+    <button aria-label="Resize" disabled class="hidden"></button>
   </div>
 </div>
       <details>
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>A Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </details>
@@ -485,9 +467,9 @@
             <div class="example">
       <div class="window">
   <div class="title-bar"> 
-    <button class="close"></button>
+    <button aria-label="Close" class="close"></button>
     <h1 class="title">Also a Title Bar</h1>
-    <button class="resize"></button>
+    <button aria-label="Resize" class="resize"></button>
   </div>
 </div>
 
@@ -500,9 +482,9 @@
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Also a Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -555,18 +537,18 @@
             <div class="example">
       <div class="window">
   <div class="title-bar"> 
-    <button class="close"></button>
+    <button aria-label="Close" class="close"></button>
     <h1 class="title">Window Without Stuff</h1>
-    <button class="resize"></button>
+    <button aria-label="Resize" class="resize"></button>
   </div>
 </div>
       <details>
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Window Without Stuff<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </details>
@@ -578,9 +560,9 @@
             <div class="example">
       <div class="window">
   <div class="title-bar"> 
-    <button class="close"></button>
+    <button aria-label="Close" class="close"></button>
     <h1 class="title">Window With Stuff</h1>
-    <button class="resize"></button>
+    <button aria-label="Resize" class="resize"></button>
   </div>
   <div class="separator"></div>
   
@@ -592,9 +574,9 @@
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Window With Stuff<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   
@@ -612,9 +594,9 @@
             <div class="example">
       <div class="window">
   <div class="title-bar"> 
-    <button class="close"></button>
+    <button aria-label="Close" class="close"></button>
     <h1 class="title">Window With Details</h1>
-    <button class="resize"></button>
+    <button aria-label="Resize" class="resize"></button>
   </div>
   <div class="details-bar">
     <span>some</span>
@@ -630,9 +612,9 @@
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Window With Details<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;details-bar&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>some<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -702,13 +684,13 @@
 
             <div class="example">
       <div class="standard-dialog center" style="width:50%;">
-  <p class="dialog-text">The Macintosh Finder, Version 1.0 (18 Jan 84)</p>
+  <h1 class="dialog-text">The Macintosh Finder, Version 1.0 (18 Jan 84)</h1>
   <p class="dialog-text">&copy; 1984 Apple Computer</p>
 </div>
       <details>
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;standard-dialog center&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:50%;&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-text&quot;</span>&gt;</span>The Macintosh Finder, Version 1.0 (18 Jan 84)<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-text&quot;</span>&gt;</span>The Macintosh Finder, Version 1.0 (18 Jan 84)<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-text&quot;</span>&gt;</span><span class="hljs-symbol">&amp;copy;</span> 1984 Apple Computer<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </details>
@@ -722,16 +704,16 @@
             <div class="example">
       <div class="window" style="width:30rem;">
   <div class="title-bar"> 
-    <button class="close"></button>
+    <button aria-label="Close" class="close"></button>
     <h1 class="title">Modeless Dialog</h1>
-    <button class="hidden"></button>
+    <button aria-label="Resize" disabled class="hidden"></button>
   </div>
   <div class="separator"></div>
   
   <div class="modeless-dialog">
     <section class="field-row" style="justify-content: flex-start">
-      <p class="modeless-text">Find:</p>
-      <input type="text" style="width:100%;" placeholder=""/>
+      <label for="text_find" class="modeless-text">Find:</label>
+      <input id="text_find" type="text" style="width:100%;" placeholder=""/>
 
     </section>
     <section class="field-row" style="justify-content: flex-end">
@@ -744,16 +726,16 @@
         <summary>Show code</summary>
         <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:30rem;&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Modeless Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modeless-dialog&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;justify-content: flex-start&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modeless-text&quot;</span>&gt;</span>Find:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:100%;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;text_find&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modeless-text&quot;</span>&gt;</span>Find:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;text_find&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:100%;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span>/&gt;</span>
 
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;justify-content: flex-end&quot;</span>&gt;</span>
@@ -774,7 +756,7 @@
   <div class="inner-border center">
 
     <div class="modal-contents">
-      <p class="modal-text">Modal Dialog</p>
+      <h1 class="modal-text">Modal Dialog</h1>
       <div style="padding-left: 20px;">
         <div class="field-row">
           <input id="radio4" type="radio" name="second-example">
@@ -807,7 +789,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner-border center&quot;</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-contents&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-text&quot;</span>&gt;</span>Modal Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-text&quot;</span>&gt;</span>Modal Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;padding-left: 20px;&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio4&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;second-example&quot;</span>&gt;</span>
@@ -912,6 +894,10 @@
             <p>If you'd like to see what else I'm up to, consider following me on <a href="https://twitter.com/sakofchit" target="_blank">Twitter</a> or checking out my <a href="https://sakun.co" target="_blank">personal site</a> :)</p>
           </div>
         </section>
+
+        <h2 class="subheading">Sponsors</h2>
+
+        <p><a href="https://getcssscan.com/?ref=systemcss" target="_blank">CSS Scan</a>: The fastest and easiest way to check, copy and edit CSS</p>
         
     </div>
   
