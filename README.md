@@ -21,7 +21,7 @@ Add the following to your head tag:
 Here's some starter code to help you get started:
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>System.css Starter</title>
     <meta charset="UTF-8" />
@@ -51,13 +51,12 @@ Here's some starter code to help you get started:
         
         <div class="modeless-dialog">
             <section class="field-row" style="justify-content: flex-start">
-            <p class="modeless-text">Find:</p>
-            <input type="text" style="width:100%;" placeholder=""/>
-        
+                <label for="text_find" class="modeless-text">Find:</label>
+                <input id="text_find" type="text" style="width:100%;" placeholder="">
             </section>
             <section class="field-row" style="justify-content: flex-end">
-            <button class="btn">Cancel</button>
-            <button class="btn" style="width:95px;">Find</button>
+                <button class="btn">Cancel</button>
+                <button class="btn" style="width:95px;">Find</button>
             </section>
         </div>
         </div>
