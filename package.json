@@ -1,0 +1,45 @@
+{
+  "name": "@sakun/system.css",
+  "version": "0.1.3",
+  "description": "A design system for building retro Apple interfaces",
+  "main": "dist/system.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "deploy": "npm run build && gh-pages -d dist",
+    "release": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakofchit/system.css.git"
+  },
+  "keywords": [
+    "css",
+    "classic macos"
+  ],
+  "author": "Sakun Acharige <hey@sakun.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sakofchit/system.css/issues"
+  },
+  "homepage": "https://github.com/sakofchit/system.css",
+  "devDependencies": {
+    "chokidar": "^3.3.1",
+    "cssnano": "^5.0.1",
+    "dedent": "^0.7.0",
+    "ejs": "^3.1.8",
+    "gh-pages": "^2.2.0",
+    "glob": "^7.1.6",
+    "highlight.js": "^10.4.1",
+    "live-server": "^1.2.1",
+    "mkdirp": "^1.0.4",
+    "postcss": "^8.4.14",
+    "postcss-calc": "^7.0.2",
+    "postcss-copy": "^7.1.0",
+    "postcss-css-variables": "^0.18.0",
+    "postcss-inline": "^1.2.0",
+    "postcss-inline-svg": "^4.1.0"
+  }
+}

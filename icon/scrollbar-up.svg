@@ -1,0 +1,22 @@
+<svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="21" height="22.375" fill="white" stroke="black"/>
+<rect width="20" height="2" transform="matrix(1 0 0 -1 1 23)" fill="black"/>
+<rect width="5.5" height="1.375" transform="matrix(1 0 0 -1 1.375 12.375)" fill="black"/>
+<rect width="6.875" height="1.375" transform="matrix(1 0 0 -1 6.875 17.875)" fill="black"/>
+<rect width="5.5" height="1.375" transform="matrix(0 -1 -1 0 6.875 17.875)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 9.625 5.5)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 11 4.125)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 19.25 12.375)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 17.875 11)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 16.5 9.625)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 15.125 8.25)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 13.75 6.875)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 12.375 5.5)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 8.25 6.875)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 6.875 8.25)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 5.5 9.625)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 4.125 11)" fill="black"/>
+<rect width="1.375" height="1.375" transform="matrix(0 -1 -1 0 2.75 12.375)" fill="black"/>
+<rect width="5.5" height="1.375" transform="matrix(0 -1 -1 0 15.125 17.875)" fill="black"/>
+<rect width="5.5" height="1.375" transform="matrix(1 0 0 -1 13.75 12.375)" fill="black"/>
+</svg>
