@@ -1,5 +1,5 @@
 
-![system.css](https://i.imgur.com/0RbDEWz.png)
+![system.css](https://i.imgur.com/goRcNZK.png)
 
 [Documentation](https://sakofchit.github.io/system.css/)
 
@@ -15,7 +15,7 @@ There's a couple ways you can get started with System.css!
 Add the following to your head tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css@0.1.0/dist/system.css" />
+<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
 ```
 
 Here's some starter code to help you get started:
@@ -25,7 +25,7 @@ Here's some starter code to help you get started:
 <head>
     <title>System.css Starter</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css@0.1.0/dist/system.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
 </head>
 <body>
     <div class="window" style="width:30rem;">
@@ -87,5 +87,6 @@ If you find a bug, consider opening an issue. If there's something that you'd li
 If you'd like to see what else I'm up to, consider following me on [Twitter](https://twitter.com/sakofchit) or checking out my [personal site](https://sakun.co) :)
 
 ## Sponsors
+[![CSS Scan](https://d33wubrfki0l68.cloudfront.net/6da92d1f39c939204d13f67ec76e725362b41e70/55cb0/img/logo.png)](https://getcssscan.com/?ref=systemcss)
 
 [CSS Scan](https://getcssscan.com/?ref=systemcss): The fastest and easiest way to check, copy and edit CSS

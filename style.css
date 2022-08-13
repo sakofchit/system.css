@@ -364,8 +364,9 @@ h2 {
   padding: 0 20px;
   text-align:center;
   background: white;
+  border-style: solid;
+  border-width: 5.5px;
   border-image: url("./icon/button.png") 30 stretch;
-  border: 5.5px solid transparent;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -386,8 +387,9 @@ h2 {
   min-width: 59px;
   text-align:center;
   background: white;
+  border-style: solid;
+  border-width: 5.5px;
   border-image: url("./icon/button.png") 30 stretch;
-  border: 5.5px solid transparent;
   color: #B6B7B8;
   text-align: center;
   text-decoration: none;
