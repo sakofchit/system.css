@@ -30,9 +30,9 @@ Here's some starter code to help you get started:
 <body>
     <div class="window" style="width:30rem;">
         <div class="title-bar"> 
-            <button class="close"></button>
+            <button aria-label="Close" class="close"></button>
             <h1 class="title">System.css</h1>
-            <button class="resize"></button>
+            <button aria-label="Resize" class="resize"></button>
         </div>
         <div class="separator"></div>
         
@@ -43,9 +43,9 @@ Here's some starter code to help you get started:
 
     <div class="window" style="width:30rem;">
         <div class="title-bar"> 
-            <button class="close"></button>
+            <button aria-label="Close" class="close"></button>
             <h1 class="title">Search</h1>
-            <button class="hidden"></button>
+            <button aria-label="Resize" disabled class="hidden"></button>
         </div>
         <div class="separator"></div>
         
@@ -89,5 +89,4 @@ If you'd like to see what else I'm up to, consider following me on [Twitter](htt
 
 ## Sponsors
 
-[![CSS Scan](https://d33wubrfki0l68.cloudfront.net/6da92d1f39c939204d13f67ec76e725362b41e70/55cb0/img/logo.png)](https://getcssscan.com/?ref=systemcss)
 [CSS Scan](https://getcssscan.com/?ref=systemcss): The fastest and easiest way to check, copy and edit CSS

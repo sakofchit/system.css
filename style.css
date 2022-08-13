@@ -29,9 +29,9 @@
     var(--radio-label-spacing);
   --checkbox-total-width: calc(var(--checkbox-total-width-precalc));
   --checkbox-left: calc(-1 * var(--checkbox-total-width-precalc));
-  --checkmark-width: 13px;
-  --checkmark-top: 1.5px;
-  --checkmark-left: 1.5px;
+  --checkmark-width: 12px;
+  --checkmark-top: 2px;
+  --checkmark-left: 2px;
 }
 
 @font-face {
@@ -179,7 +179,7 @@ h2 {
 
 .modeless-dialog {
   height: 100%;
-  padding: 0.5rem 0.5rem;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   font-size: 18px;
   letter-spacing: -0.025em;
 }
@@ -454,6 +454,9 @@ input[type="radio"] + label::before {
   background: svg-load("./icon/radio-border.svg");
 }
 
+input[type="radio"]:focus-visible + label::before {
+  background-image: svg-load("./icon/radio-border-focused.svg");
+}
 
 input[type="radio"]:checked + label::after {
   content: "";
@@ -481,6 +484,10 @@ input[type="checkbox"] + label::before {
   background: var(--button-highlight);
   box-shadow: var(--border-field);
   margin-right: var(--radio-label-spacing);
+}
+
+input[type="checkbox"]:focus-visible + label::before {
+  outline: 1px solid black;
 }
 
 input[type="checkbox"]:checked + label::after {
@@ -523,11 +530,12 @@ input[type="checkbox"][disabled]:checked + label::after {
 
 .apple {
   background: svg-load("./icon/apple.svg");
-  height: 20.7px;
-  width: 17px;
+  height: 22px;
+  width: 18px;
   background-repeat: no-repeat;
   border: none;
-  
+  display: inline-block;
+  margin-right: 2px;
 }
 
 /* Form */
@@ -563,13 +571,11 @@ form {
   height: 0; 
 }
 
+.dd-toggle:focus,
 .dd-toggle:hover {
   background-color: black;
   color: white;
-}
-
-.dd-input {
-  display: none;
+  outline: none;
 }
 
 .dd-menu {
@@ -584,14 +590,6 @@ form {
   font-family: Chicago_12;
   font-size: 1em;
 }
-
-.dd-input + .dd-menu {
-  display: none;
-} 
-
-.dd-input:checked + .dd-menu {
-  display: block;
-} 
 
 .dd-menu li {
   padding: 5px 20px;
@@ -612,4 +610,9 @@ form {
 .dd-menu li.divider{
   padding: 0;
   border-bottom: 1.5px dotted #000;
+}
+
+/* styles specific to demo page */
+.menu-items > li {
+  margin-bottom: 1rem;
 }
