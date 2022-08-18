@@ -2,7 +2,7 @@ const chokidar = require("chokidar");
 const build = require("./build");
 
 chokidar
-  .watch(["style.css", "build.js", "docs", "fonts", "icon"], {
+  .watch(["style.css", "build.js", "docs", "fonts", "icon", "scripts.js"], {
     usePolling: true,
   })
   .on("change", (file) => {

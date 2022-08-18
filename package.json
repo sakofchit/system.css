@@ -1,6 +1,6 @@
 {
   "name": "@sakun/system.css",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A design system for building retro Apple interfaces",
   "main": "dist/system.css",
   "directories": {
@@ -41,5 +41,8 @@
     "postcss-css-variables": "^0.18.0",
     "postcss-inline": "^1.2.0",
     "postcss-inline-svg": "^4.1.0"
+  },
+  "dependencies": {
+    "draggabilly": "^3.0.0"
   }
 }
