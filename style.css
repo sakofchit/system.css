@@ -546,72 +546,96 @@ form {
   font-size:14px;
 }
 
-/* Dropdown */
-.dropdown {
-  display: inline-block;
-  position: relative;
-}
-
-.dd-toggle {
-  display: inline-block;
-  padding: 5px;
-  background-color: #ffffff;
-  cursor: pointer;
-  white-space: nowrap;
+/* select menu */
+select {
+  border: 1.5px solid;
+  height: auto;
+  min-width: 25%;
   font-family: Chicago_12;
-  font-size: 1em; 
-  
+  font-size: 18px;
+  background-image: svg-load("./icon/select-button.svg");
+  background-position: top 2px right 2px;
+  background-repeat: no-repeat;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  padding-left: 20px;
+  -webkit-box-shadow: 2px 8px 0 0px black;
+	   -moz-box-shadow: 2px 8px 0 0px black;
+	        box-shadow: 2px 2px 0 -1px black;
 }
 
-.dd-toggle:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  width: 0; 
-  height: 0; 
-}
-
-.dd-toggle:focus,
-.dd-toggle:hover {
-  background-color: black;
-  color: white;
-  outline: none;
-}
-
-.dd-menu {
-  position: absolute;
-  top: 100%;
+/* menu-bar */
+ul[role] {
+  margin: 0;
   padding: 0;
-  margin: 2px 0 0 0;
-  box-shadow: var(--box-shadow);
-  border: 2px solid;
-  background-color: #ffffff;
-  list-style-type: none;
+  list-style: none;
+  cursor: pointer;
   font-family: Chicago_12;
   font-size: 1em;
 }
-
-.dd-menu li {
+ul[role="menu-bar"] {
+  display: flex;
+  background: white;
+}
+ul[role="menu-bar"] > [role="menu-item"] {
+  position: relative;
+  padding: 6px 10px;
+}
+ul[role="menu-bar"] > [role="menu-item"]:focus, ul[role="menu-bar"] > [role="menu-item"]:focus-within, ul[role="menu-bar"] > [role="menu-item"]:hover {
+  background: #000;
+  color: #fff;
+  outline: none;
+}
+ul[role="menu"] {
+  position: relative;
+  min-width: 200px;
+  background: white;
+  color: initial;
+  border: 1px solid;
+  box-shadow: var(--box-shadow);
+}
+ul[role="menu"]::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  left: 28px;
+  width: 2px;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.15), inset -1px 0 #fff;
+}
+[role="menu-item"] ul[role="menu"] {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 99;
+}
+ul[role="menu"] > [role="menu-item"] > a, ul[role="menu"] > [role="menu-item"] > button, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"] {
+  all: unset;
+  position: relative;
   padding: 5px 20px;
-  cursor: pointer;
-  white-space: nowrap;
-}
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 
-.dd-menu li:hover {
-  background-color: black;
+}
+ul[role="menu"] > [role="menu-item"] > a:hover, ul[role="menu"] > [role="menu-item"] > button:hover, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover, ul[role="menu"] > [role="menu-item"] > a:focus, ul[role="menu"] > [role="menu-item"] > button:focus, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
+  background: #000;
   color: white;
 }
-
-.dd-menu a:hover {
-  background-color: black;
-  color: white;
+ul [role="menu-item"] {
+  position: relative;
 }
-
-.dd-menu li.divider{
+ul [role="menu-item"]:focus > [role="menu"], ul [role="menu-item"]:focus-within > [role="menu"] {
+  display: block;
+}
+ul [role="menu-item"].divider::after {
+  content: "";
+  pointer-events: none;
+  display: block;
   padding: 0;
-  border-bottom: 1.5px dotted #000;
+  border-top: 1.5px dotted #000;
 }
 
 /* styles specific to demo page */
