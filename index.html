@@ -30,7 +30,8 @@
                 <li><a href="#buttons">Buttons</a></li>
                 <li><a href="#radio-buttons">Radio Buttons</a></li>
                 <li><a href="#checkboxes">Checkboxes</a></li>
-                <li><a href="#dropdown">Dropdown</a></li>
+                <li><a href="#menu-bar">Menu Bar</a></li>
+                <li><a href="#select-menu">Select Menu</a></li>
                 <li><a href="#text-box">Text Box</a></li>
               </ul>
             </li>
@@ -220,158 +221,171 @@
   
   
         <section class="component">
-          <h3 class="subheading" id="dropdown">Dropdown</h3>
+          <h3 class="subheading" id="menu-bar">Menu Bar</h3>
           <div style="padding-left: 20px;">
             <blockquote>
-              A dropdown is a menu that offers a list of options.
+              The menu bar extends across the top of the screen and contains words and
+              icons that serve as the title of each menu
+              <footer>&mdash; Apple HI Guidelines, p. 52</footer>
             </blockquote>
-  
-            <p>Apply the <code>dd-toggle</code> class to what you want to serve as a dropdown</p>
+
+            <p>A menu bar consists of menu elements that name menu items and they typically have a dropdown menu associated with them.</p>
+
+            <p>To create a menu bar we will use the <code>.menu-bar</code> class. </p>
   
             <div class="example">
-      <details class="dropdown">
-
-  <summary class="dd-toggle">
+      <ul role="menu-bar">
+  <li role="menu-item" tabindex="0" aria-haspopup="true">
     File
-  </summary>
-              
-  <ul class="dd-menu">
-    <li>Action</li>
-    <li>Another action</li>
-    <li>Something else here</li>
-    <li class="divider"></li>
-    <li>
-      <a href="https://twitter.com/sakofchit">sakun's twitter</a>
-    </li>
-  </ul>
-  
-</details>
-
-<details class="dropdown">
-
-  <summary class="dd-toggle">
+    <ul role="menu">
+      <li role="menu-item"><a href="#menu">Action</a></li>
+      <li role="menu-item"><a href="#menu">Another Action</a></li>
+      <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
+      <li role="menu-item"><a href="https://twitter.com/sakofchit">sakun's twitter</a></li>
+    </ul>
+  </li>
+  <li role="menu-item" tabindex="0" aria-haspopup="true">
     Edit
-  </summary>
-
-  <ul class="dd-menu">
-    <li>Woah</li>
-    <li class="divider"></li>
-    <li>Another action</li>
-    <li>Something else here</li>
-    <li class="divider"></li>
-    <li>
-      <a href="https://sakun.co">sakun's projects</a>
-    </li>
-  </ul>
-  
-</details>
-
-<details class="dropdown">
-
-  <summary class="dd-toggle">
+    <ul role="menu">
+      <li role="menu-item"><a href="#menu">Action</a></li>
+      <li role="menu-item"><a href="#menu">Another Action</a></li>
+      <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
+      <li role="menu-item"><a href="https://sakun.co">sakun's projects</a></li>
+    </ul>
+  </li>
+  <li role="menu-item" tabindex="0" aria-haspopup="true">
     View
-  </summary>
-
-  <ul class="dd-menu">
-    <li>Action</li>
-    <li>Another action</li>
-    <li>Something else here</li>
-    <li class="divider"></li>
-    <li>
-      <a href="https://apple.com">Apple</a>
-    </li>
-  </ul>
-  
-</details>
-
-<details class="dropdown">
-
-  <summary class="dd-toggle">
+    <ul role="menu">
+      <li role="menu-item"><a href="#menu">Action</a></li>
+      <li role="menu-item"><a href="#menu">Another Action</a></li>
+      <li role="menu-item"><a href="#menu">Something else here</a></li>
+    </ul>
+  </li>
+  <li role="menu-item" tabindex="0" aria-haspopup="true">
     Special
-  </summary>
-
-  <ul class="dd-menu">
-    <li>You probably</li>
-    <li>Get the</li>
-    <li class="divider"></li>
-    <li>Idea</li>
-  </ul>
-  
-</details>
+    <ul role="menu">
+      <li role="menu-item"><a href="#menu">You</a></li>
+      <li role="menu-item"><a href="#menu">Get the</a></li>
+      <li role="menu-item"><a href="#menu">Idea</a></li>
+    </ul>
+  </li>
+</ul>
       <details>
         <summary>Show code</summary>
-        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-bar&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
     File
-  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
-              
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://twitter.com/sakofchit&quot;</span>&gt;</span>sakun&#x27;s twitter<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  
-<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://twitter.com/sakofchit&quot;</span>&gt;</span>sakun&#x27;s twitter<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
     Edit
-  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Woah<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://sakun.co&quot;</span>&gt;</span>sakun&#x27;s projects<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  
-<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://sakun.co&quot;</span>&gt;</span>sakun&#x27;s projects<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
     View
-  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Another action<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://apple.com&quot;</span>&gt;</span>Apple<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  
-<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-toggle&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
     Special
-  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dd-menu&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>You probably<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Get the<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Idea<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  
-<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></code></pre>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>You<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Get the<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Idea<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
       </details>
     </div>
-  
+
+            <p>We can also manipulate a menu bar into a standard dropdown.</p>
+
+            <div class="example">
+      <ul role="menu-bar">
+  <li role="menu-item" tabindex="0" aria-haspopup="true">
+    Dropdown
+    <ul role="menu">
+      <li role="menu-item"><a href="#menu">Action</a></li>
+      <li role="menu-item"><a href="#menu">Another Action</a></li>
+      <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
+      <li role="menu-item"><a href="https://twitter.com/sakofchit">sakun's twitter</a></li>
+    </ul>
+  </li>
+</ul>
+      <details>
+        <summary>Show code</summary>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-bar&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+    Dropdown
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://twitter.com/sakofchit&quot;</span>&gt;</span>sakun&#x27;s twitter<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+      </details>
+    </div>
+          </div>
+        </section>
+
+
+        <section class="component">
+          <h3 class="subheading" id="select-menu">Select Menu</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              A select menu can be used to create a drop-down list, typically used in forms.
+            </blockquote>
+
+            <p>Select menus can be rendered using the <code>select</code> and <code>option</code> elements.</p>
+
+            <div class="example">
+      <select>
+  <option>name</option>
+  <option>age</option>
+  <option>date of birth</option>
+</select>
+      <details>
+        <summary>Show code</summary>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>name<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>age<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>date of birth<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></code></pre>
+      </details>
+    </div>
+
+            <p>By default the first option will be selected, but you can change that by adding the <code>selected</code> attribute to an <code>option</code></p>
+
+            <div class="example">
+      <select>
+  <option>name</option>
+  <option>age</option>
+  <option selected>date of birth</option>
+</select>
+      <details>
+        <summary>Show code</summary>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>name<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>age<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">selected</span>&gt;</span>date of birth<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></code></pre>
+      </details>
+    </div>
           </div>
         </section>
   
@@ -878,7 +892,7 @@
           </div>
         </section>
   
-        <h2 class="subheading">Contributing, Credits, etc.</h2>
+        <h2 class="subheading" id="contributing">Contributing, Credits, etc.</h2>
   
         <section class="component">
           <div>
@@ -886,10 +900,7 @@
   
             <p>System.css is still in beta! There's a few things that are currently missing that I incline on adding pretty soon. I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found <a href="https://github.com/sakofchit/system.css/tree/main/icon">here</a>.</p>
 
-            <p>The Github repository can be found <a href="https://github.com/sakofchit/system.css">here</a></p>
-              
-              
-            <p>If you find a bug, consider opening an issue <a href="https://github.com/sakofchit/system.css">here</a>. If there's something that you'd like to add, please feel free to create a PR!</p>
+            <p>If you find a bug, consider opening an issue <a href="https://github.com/sakofchit/system.css/issues">here</a>. If there's something that you'd like to add, please feel free to create a PR!</p>
   
             <p>If you'd like to see what else I'm up to, consider following me on <a href="https://twitter.com/sakofchit" target="_blank">Twitter</a> or checking out my <a href="https://sakun.co" target="_blank">personal site</a> :)</p>
           </div>
@@ -903,5 +914,6 @@
   
   </div>
   </main>
+
 </body>
 </html>

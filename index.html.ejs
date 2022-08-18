@@ -30,7 +30,8 @@
                 <li><a href="#buttons">Buttons</a></li>
                 <li><a href="#radio-buttons">Radio Buttons</a></li>
                 <li><a href="#checkboxes">Checkboxes</a></li>
-                <li><a href="#dropdown">Dropdown</a></li>
+                <li><a href="#menu-bar">Menu Bar</a></li>
+                <li><a href="#select-menu">Select Menu</a></li>
                 <li><a href="#text-box">Text Box</a></li>
               </ul>
             </li>
@@ -183,88 +184,104 @@
   
   
         <section class="component">
-          <h3 class="subheading" id="dropdown">Dropdown</h3>
+          <h3 class="subheading" id="menu-bar">Menu Bar</h3>
           <div style="padding-left: 20px;">
             <blockquote>
-              A dropdown is a menu that offers a list of options.
+              The menu bar extends across the top of the screen and contains words and
+              icons that serve as the title of each menu
+              <footer>&mdash; Apple HI Guidelines, p. 52</footer>
             </blockquote>
-  
-            <p>Apply the <code>dd-toggle</code> class to what you want to serve as a dropdown</p>
+
+            <p>A menu bar consists of menu elements that name menu items and they typically have a dropdown menu associated with them.</p>
+
+            <p>To create a menu bar we will use the <code>.menu-bar</code> class. </p>
   
             <%- example(`
-              
-  
-              <details class="dropdown">
-  
-                <summary class="dd-toggle">
-                  File
-                </summary>
-                            
-                <ul class="dd-menu">
-                  <li>Action</li>
-                  <li>Another action</li>
-                  <li>Something else here</li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="https://twitter.com/sakofchit">sakun's twitter</a>
-                  </li>
+
+            <ul role="menu-bar">
+              <li role="menu-item" tabindex="0" aria-haspopup="true">
+                File
+                <ul role="menu">
+                  <li role="menu-item"><a href="#menu">Action</a></li>
+                  <li role="menu-item"><a href="#menu">Another Action</a></li>
+                  <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
+                  <li role="menu-item"><a href="https://twitter.com/sakofchit">sakun's twitter</a></li>
                 </ul>
-                
-              </details>
-  
-              <details class="dropdown">
-  
-                <summary class="dd-toggle">
-                  Edit
-                </summary>
-              
-                <ul class="dd-menu">
-                  <li>Woah</li>
-                  <li class="divider"></li>
-                  <li>Another action</li>
-                  <li>Something else here</li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="https://sakun.co">sakun's projects</a>
-                  </li>
+              </li>
+              <li role="menu-item" tabindex="0" aria-haspopup="true">
+                Edit
+                <ul role="menu">
+                  <li role="menu-item"><a href="#menu">Action</a></li>
+                  <li role="menu-item"><a href="#menu">Another Action</a></li>
+                  <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
+                  <li role="menu-item"><a href="https://sakun.co">sakun's projects</a></li>
                 </ul>
-                
-              </details>
-  
-              <details class="dropdown">
-  
-                <summary class="dd-toggle">
-                  View
-                </summary>
-              
-                <ul class="dd-menu">
-                  <li>Action</li>
-                  <li>Another action</li>
-                  <li>Something else here</li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="https://apple.com">Apple</a>
-                  </li>
+              </li>
+              <li role="menu-item" tabindex="0" aria-haspopup="true">
+                View
+                <ul role="menu">
+                  <li role="menu-item"><a href="#menu">Action</a></li>
+                  <li role="menu-item"><a href="#menu">Another Action</a></li>
+                  <li role="menu-item"><a href="#menu">Something else here</a></li>
                 </ul>
-                
-              </details>
-  
-              <details class="dropdown">
-  
-                <summary class="dd-toggle">
-                  Special
-                </summary>
-              
-                <ul class="dd-menu">
-                  <li>You probably</li>
-                  <li>Get the</li>
-                  <li class="divider"></li>
-                  <li>Idea</li>
+              </li>
+              <li role="menu-item" tabindex="0" aria-haspopup="true">
+                Special
+                <ul role="menu">
+                  <li role="menu-item"><a href="#menu">You</a></li>
+                  <li role="menu-item"><a href="#menu">Get the</a></li>
+                  <li role="menu-item"><a href="#menu">Idea</a></li>
                 </ul>
-                
-              </details>
-              `)%>
-  
+              </li>
+            </ul>
+            `)%>
+
+            <p>We can also manipulate a menu bar into a standard dropdown.</p>
+
+            <%- example(`
+
+            <ul role="menu-bar">
+              <li role="menu-item" tabindex="0" aria-haspopup="true">
+                Dropdown
+                <ul role="menu">
+                  <li role="menu-item"><a href="#menu">Action</a></li>
+                  <li role="menu-item"><a href="#menu">Another Action</a></li>
+                  <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
+                  <li role="menu-item"><a href="https://twitter.com/sakofchit">sakun's twitter</a></li>
+                </ul>
+              </li>
+            </ul>
+            `)%>
+          </div>
+        </section>
+
+
+        <section class="component">
+          <h3 class="subheading" id="select-menu">Select Menu</h3>
+          <div style="padding-left: 20px;">
+            <blockquote>
+              A select menu can be used to create a drop-down list, typically used in forms.
+            </blockquote>
+
+            <p>Select menus can be rendered using the <code>select</code> and <code>option</code> elements.</p>
+
+            <%- example(`
+              <select>
+                <option>name</option>
+                <option>age</option>
+                <option>date of birth</option>
+              </select>
+            `)%>
+
+            <p>By default the first option will be selected, but you can change that by adding the <code>selected</code> attribute to an <code>option</code></p>
+
+            <%- example(`
+              <select>
+                <option>name</option>
+                <option>age</option>
+                <option selected>date of birth</option>
+              </select>
+            `)%>
           </div>
         </section>
   
@@ -590,7 +607,7 @@
           </div>
         </section>
   
-        <h2 class="subheading">Contributing, Credits, etc.</h2>
+        <h2 class="subheading" id="contributing">Contributing, Credits, etc.</h2>
   
         <section class="component">
           <div>
@@ -598,10 +615,7 @@
   
             <p>System.css is still in beta! There's a few things that are currently missing that I incline on adding pretty soon. I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found <a href="https://github.com/sakofchit/system.css/tree/main/icon">here</a>.</p>
 
-            <p>The Github repository can be found <a href="https://github.com/sakofchit/system.css">here</a></p>
-              
-              
-            <p>If you find a bug, consider opening an issue <a href="https://github.com/sakofchit/system.css">here</a>. If there's something that you'd like to add, please feel free to create a PR!</p>
+            <p>If you find a bug, consider opening an issue <a href="https://github.com/sakofchit/system.css/issues">here</a>. If there's something that you'd like to add, please feel free to create a PR!</p>
   
             <p>If you'd like to see what else I'm up to, consider following me on <a href="https://twitter.com/sakofchit" target="_blank">Twitter</a> or checking out my <a href="https://sakun.co" target="_blank">personal site</a> :)</p>
           </div>
@@ -615,5 +629,6 @@
   
   </div>
   </main>
+
 </body>
 </html>
