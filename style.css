@@ -46,7 +46,7 @@
 /* Fonts below are recreations by Giles Booth */
 @font-face {
   font-family: Chicago_12;
-  src: url("fonts/ChiKareGo2.ttf"); 
+  src: url("fonts/ChiKareGo2.ttf");
 }
 @font-face {
   font-family: Geneva_9;
@@ -408,6 +408,24 @@ input  {
 
 input:focus  {
   outline:none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  background: #000;
+  color: #fff;
 }
 
 input[type="radio"] + label::before {
