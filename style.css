@@ -136,12 +136,12 @@ hr {
   border-top: 0.15em solid #000;
 }
 
-.container {
+/*.container {
   width: 50%;
   margin: 0 auto;
   display: block;
 }
-
+*/
 h1,
 .heading {
   font-family: Chicago;
@@ -171,6 +171,7 @@ h2 {
 .modal-dialog, .alert-box {
   width: auto;
   padding: 13px;
+  background: #fff;
 }
 
 .modal-contents, .alert-contents {
@@ -550,7 +551,7 @@ form {
 select {
   border: 1.5px solid;
   height: auto;
-  min-width: 25%;
+  width: 10rem;
   font-family: Chicago_12;
   font-size: 18px;
   background-image: svg-load("./icon/select-button.svg");

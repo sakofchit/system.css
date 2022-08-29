@@ -18,17 +18,15 @@ body {
   padding: 0;
 }
 
-main {
-  width: 90rem;
-  margin-left: 240px;
-  margin-bottom: 60px;
-  margin-top: 25px;
-}
+/* Layout: */
 
-.container{
-  width: 80%;
-}
+.col-main {
+  flex: 1;
+}  
 
+.col-complementary {
+  flex: 1;
+}
 
 aside {
   width: 200px;
@@ -146,4 +144,33 @@ pre {
 .menu-items {
   padding: 0;
   font-size: 14px;
+}
+
+/* responsive shiz */
+@media only screen and (min-width: 640px) {
+  .layout {
+    display: flex;
+    justify-content: space-between;
+  }
+  .standard-dialog {
+    margin-right: 20px;
+    margin-top: 18px;
+  }
+  .sidebar {
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none !important;
+  }
+  .example {
+    margin: 0px;
+  }
+  .component {
+    display: contents;
+  }
+  .scale-down {
+    transform: scale(0.8);
+  }
 }
