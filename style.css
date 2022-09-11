@@ -40,7 +40,7 @@
 }
 @font-face {
   font-family: Monaco;
-  src: url("fonts/monaco.ttf")
+  src: url("fonts/monaco.ttf");
 }
 
 /* Fonts below are recreations by Giles Booth */
@@ -50,7 +50,7 @@
 }
 @font-face {
   font-family: Geneva_9;
-  src: url("fonts/FindersKeepers.ttf")
+  src: url("fonts/FindersKeepers.ttf");
 }
 
 ::-webkit-scrollbar {
@@ -63,7 +63,22 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background: linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
   background-color: white;
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
@@ -71,7 +86,22 @@
   border-left: 3px solid black;
 }
 .darkmode ::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+  background: linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    ),
+    linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    );
   background-color: black;
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
@@ -172,12 +202,14 @@
 }
 
 body {
-  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center, linear-gradient(#ffffff 21px, transparent 1%) center, #000000;
+  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center,
+    linear-gradient(#ffffff 21px, transparent 1%) center, #000000;
   background-size: 22px 22px;
   background-attachment: fixed;
 }
 .darkmode body {
-  background: linear-gradient(90deg, #000000 21px, transparent 1%) center, linear-gradient(#000000 21px, transparent 1%) center, #ffffff;
+  background: linear-gradient(90deg, #000000 21px, transparent 1%) center,
+    linear-gradient(#000000 21px, transparent 1%) center, #ffffff;
 }
 
 a {
@@ -230,16 +262,19 @@ h2 {
   background-color: black;
 }
 
-.modal-dialog, .alert-box {
+.modal-dialog,
+.alert-box {
   width: auto;
   padding: 13px;
   background: #fff;
 }
-.darkmode .modal-dialog,.darkmode .alert-box {
+.darkmode .modal-dialog,
+.darkmode .alert-box {
   background: #000;
 }
 
-.modal-contents, .alert-contents {
+.modal-contents,
+.alert-contents {
   padding: 10px;
 }
 
@@ -320,10 +355,10 @@ h2 {
   text-align: center;
   cursor: default;
   font-family: Chicago_12;
-  color:#A5A5A5;
+  color: #a5a5a5;
 }
 .darkmmode .inactive-title-bar .title {
-  color:#5A5A5A;
+  color: #5a5a5a;
 }
 
 .title-bar button {
@@ -347,7 +382,8 @@ h2 {
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-.title-bar button.close::before, .title-bar button.close::after {
+.title-bar button.close::before,
+.title-bar button.close::after {
   content: "";
   position: absolute;
   top: 0;
@@ -357,38 +393,55 @@ h2 {
   opacity: 0;
 }
 .title-bar button.close::before {
-  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
+  background: linear-gradient(#000 0%, #000 100%) left center,
+    linear-gradient(#000 0%, #000 100%) right center,
+    linear-gradient(#000 0%, #000 100%) center top,
+    linear-gradient(#000 0%, #000 100%) center bottom;
   background-size: 30% 4px, 30% 4px, 4px 30%, 4px 30%;
   background-repeat: no-repeat;
 }
 .darkmode .title-bar button.close::before {
-  background: linear-gradient(#fff 0%, #fff 100%) left center, linear-gradient(#fff 0%, #fff 100%) right center, linear-gradient(#fff 0%, #fff 100%) center top, linear-gradient(#fff 0%, #fff 100%) center bottom;
+  background: linear-gradient(#fff 0%, #fff 100%) left center,
+    linear-gradient(#fff 0%, #fff 100%) right center,
+    linear-gradient(#fff 0%, #fff 100%) center top,
+    linear-gradient(#fff 0%, #fff 100%) center bottom;
   background-size: 30% 4px, 30% 4px, 4px 30%, 4px 30%;
   background-repeat: no-repeat;
 }
 .title-bar button.close::after {
-  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
-  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px, 3.6363636364px 22.5%, 3.6363636364px 22.5%;
+  background: linear-gradient(#000 0%, #000 100%) left center,
+    linear-gradient(#000 0%, #000 100%) right center,
+    linear-gradient(#000 0%, #000 100%) center top,
+    linear-gradient(#000 0%, #000 100%) center bottom;
+  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px,
+    3.6363636364px 22.5%, 3.6363636364px 22.5%;
   background-repeat: no-repeat;
   transform: rotate(45deg) scale(1.1);
 }
 .darkmode .title-bar button.close::after {
-  background: linear-gradient(#fff 0%, #fff 100%) left center, linear-gradient(#fff 0%, #fff 100%) right center, linear-gradient(#fff 0%, #fff 100%) center top, linear-gradient(#fff 0%, #fff 100%) center bottom;
-  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px, 3.6363636364px 22.5%, 3.6363636364px 22.5%;
+  background: linear-gradient(#fff 0%, #fff 100%) left center,
+    linear-gradient(#fff 0%, #fff 100%) right center,
+    linear-gradient(#fff 0%, #fff 100%) center top,
+    linear-gradient(#fff 0%, #fff 100%) center bottom;
+  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px,
+    3.6363636364px 22.5%, 3.6363636364px 22.5%;
   background-repeat: no-repeat;
   transform: rotate(45deg) scale(1.1);
 }
-.title-bar button.close:active::before, .title-bar button.close:active::after {
+.title-bar button.close:active::before,
+.title-bar button.close:active::after {
   opacity: 1;
 }
 .title-bar button.resize {
-  background: linear-gradient(#000 0%, #000 100%) left 58%, linear-gradient(to bottom, #000 0%, #000 100%) 58% top;
+  background: linear-gradient(#000 0%, #000 100%) left 58%,
+    linear-gradient(to bottom, #000 0%, #000 100%) 58% top;
   background-size: 60% 4px, 4px 60%;
   background-repeat: no-repeat;
   background-color: #fff;
 }
 .darkmode .title-bar button.resize {
-  background: linear-gradient(#fff 0%, #fff 100%) left 58%, linear-gradient(to bottom, #fff 0%, #fff 100%) 58% top;
+  background: linear-gradient(#fff 0%, #fff 100%) left 58%,
+    linear-gradient(to bottom, #fff 0%, #fff 100%) 58% top;
   background-size: 60% 4px, 4px 60%;
   background-repeat: no-repeat;
   background-color: #000;
@@ -433,7 +486,22 @@ h2 {
   background-color: #000;
 }
 .window-pane::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background: linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
   background-color: white;
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
@@ -441,7 +509,22 @@ h2 {
   border-left: 4px solid black;
 }
 .darkmode .window-pane::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+  background: linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    ),
+    linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    );
   background-color: black;
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
@@ -507,13 +590,12 @@ h2 {
   font-weight: 100;
 }
 
-
 /* buttons */
 .btn {
   min-height: 20px;
   min-width: 59px;
   padding: 0 20px;
-  text-align:center;
+  text-align: center;
   background: white;
   border-style: solid;
   border-width: 5.5px;
@@ -534,13 +616,13 @@ h2 {
 
 .btn:active {
   background: black;
-  border-radius:6px;
+  border-radius: 6px;
   color: white;
   font-family: Chicago_12;
 }
 .darkmode .btn:active {
   background: white;
-  border-radius:6px;
+  border-radius: 6px;
   color: white;
   font-family: Chicago_12;
 }
@@ -548,12 +630,12 @@ h2 {
 .btn:disabled {
   min-height: 20px;
   min-width: 59px;
-  text-align:center;
+  text-align: center;
   background: white;
   border-style: solid;
   border-width: 5.5px;
   border-image: url("./icon/button.png") 30 stretch;
-  color: #B6B7B8;
+  color: #b6b7b8;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -568,18 +650,18 @@ h2 {
 }
 
 /* text input */
-input  {
+input {
   border: 1.5px solid black;
   font-family: Chicago_12;
   font-size: 18px;
   padding-left: 5px;
 }
-.darkmode input  {
+.darkmode input {
   border: 1.5px solid white;
 }
 
-input:focus  {
-  outline:none;
+input:focus {
+  outline: none;
 }
 
 input[type="radio"] + label::before {
@@ -637,7 +719,6 @@ input[type="radio"] + label::before {
 .darkmmode input[type="radio"] + label::before {
   background: svg-load("./icon/dark/radio-border.svg");
 }
-
 
 input[type="radio"]:focus-visible + label::before {
   background-image: svg-load("./icon/radio-border-focused.svg");
@@ -702,7 +783,6 @@ input[type="checkbox"]:checked + label::after {
   background-repeat: no-repeat;
 }
 
-
 input[type="checkbox"][disabled] + label::before {
   background: var(--surface);
 }
@@ -746,7 +826,7 @@ input[type="checkbox"][disabled]:checked + label::after {
 /* Form */
 form {
   font-family: "Inconsolata", Menlo, Chicago, Geneva;
-  font-size:14px;
+  font-size: 14px;
 }
 
 /* select menu */
@@ -765,16 +845,16 @@ select {
   position: relative;
   padding-left: 20px;
   -webkit-box-shadow: 2px 8px 0 0px black;
-	   -moz-box-shadow: 2px 8px 0 0px black;
-	        box-shadow: 2px 2px 0 -1px black;
+  -moz-box-shadow: 2px 8px 0 0px black;
+  box-shadow: 2px 2px 0 -1px black;
 }
 .darkmmode select {
   background-image: svg-load("./icon/dark/select-button.svg");
   background-position: top 2px right 2px;
   background-repeat: no-repeat;
   -webkit-box-shadow: 2px 8px 0 0px white;
-	   -moz-box-shadow: 2px 8px 0 0px white;
-	        box-shadow: 2px 2px 0 -1px white;
+  -moz-box-shadow: 2px 8px 0 0px white;
+  box-shadow: 2px 2px 0 -1px white;
 }
 
 /* menu-bar */
@@ -797,12 +877,16 @@ ul[role="menu-bar"] > [role="menu-item"] {
   position: relative;
   padding: 6px 10px;
 }
-ul[role="menu-bar"] > [role="menu-item"]:focus, ul[role="menu-bar"] > [role="menu-item"]:focus-within, ul[role="menu-bar"] > [role="menu-item"]:hover {
+ul[role="menu-bar"] > [role="menu-item"]:focus,
+ul[role="menu-bar"] > [role="menu-item"]:focus-within,
+ul[role="menu-bar"] > [role="menu-item"]:hover {
   background: #000;
   color: #fff;
   outline: none;
 }
-.darkmode ul[role="menu-bar"] > [role="menu-item"]:focus, ul[role="menu-bar"] > [role="menu-item"]:focus-within, ul[role="menu-bar"] > [role="menu-item"]:hover {
+.darkmode ul[role="menu-bar"] > [role="menu-item"]:focus,
+ul[role="menu-bar"] > [role="menu-item"]:focus-within,
+ul[role="menu-bar"] > [role="menu-item"]:hover {
   background: #fff;
   color: #000;
 }
@@ -835,27 +919,39 @@ ul[role="menu"]::before {
   top: 100%;
   z-index: 99;
 }
-ul[role="menu"] > [role="menu-item"] > a, ul[role="menu"] > [role="menu-item"] > button, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"] {
+ul[role="menu"] > [role="menu-item"] > a,
+ul[role="menu"] > [role="menu-item"] > button,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"] {
   all: unset;
   position: relative;
   padding: 5px 20px;
   display: block;
   width: 100%;
   box-sizing: border-box;
-
 }
-ul[role="menu"] > [role="menu-item"] > a:hover, ul[role="menu"] > [role="menu-item"] > button:hover, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover, ul[role="menu"] > [role="menu-item"] > a:focus, ul[role="menu"] > [role="menu-item"] > button:focus, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
+ul[role="menu"] > [role="menu-item"] > a:hover,
+ul[role="menu"] > [role="menu-item"] > button:hover,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover,
+ul[role="menu"] > [role="menu-item"] > a:focus,
+ul[role="menu"] > [role="menu-item"] > button:focus,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
   background: #000;
   color: white;
 }
-.darkmmode ul[role="menu"] > [role="menu-item"] > a:hover, ul[role="menu"] > [role="menu-item"] > button:hover, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover, ul[role="menu"] > [role="menu-item"] > a:focus, ul[role="menu"] > [role="menu-item"] > button:focus, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
+.darkmmode ul[role="menu"] > [role="menu-item"] > a:hover,
+ul[role="menu"] > [role="menu-item"] > button:hover,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover,
+ul[role="menu"] > [role="menu-item"] > a:focus,
+ul[role="menu"] > [role="menu-item"] > button:focus,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
   background: #fff;
   color: black;
 }
 ul [role="menu-item"] {
   position: relative;
 }
-ul [role="menu-item"]:focus > [role="menu"], ul [role="menu-item"]:focus-within > [role="menu"] {
+ul [role="menu-item"]:focus > [role="menu"],
+ul [role="menu-item"]:focus-within > [role="menu"] {
   display: block;
 }
 ul [role="menu-item"].divider::after {
