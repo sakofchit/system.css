@@ -57,7 +57,7 @@
   width: 22px;
   background-color: #fff;
 }
-.darkmode ::-webkit-scrollbar {
+.darkmode::-webkit-scrollbar {
   width: 22px;
   background-color: #000;
 }
@@ -85,7 +85,7 @@
   width: 10px;
   border-left: 3px solid black;
 }
-.darkmode ::-webkit-scrollbar-track {
+.darkmode::-webkit-scrollbar-track {
   background: linear-gradient(
       45deg,
       #fff 25%,
@@ -116,7 +116,7 @@
   border: 2px solid black;
   border-right: none;
 }
-.darkmode ::-webkit-scrollbar-thumb {
+.darkmode::-webkit-scrollbar-thumb {
   width: 20px;
   box-sizing: content-box;
   background-color: #000;
@@ -136,7 +136,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-up.svg");
 }
-.darkmode ::-webkit-scrollbar-button:vertical:start {
+.darkmode::-webkit-scrollbar-button:vertical:start {
   background-image: svg-load("./icon/dark/scrollbar-up.svg");
 }
 
@@ -145,7 +145,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-up-active.svg");
 }
-.darkmode ::-webkit-scrollbar-button:vertical:start:active {
+.darkmode::-webkit-scrollbar-button:vertical:start:active {
   background-image: svg-load("./icon/dark/scrollbar-up-active.svg");
 }
 
@@ -153,7 +153,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-down.svg");
 }
-.darkmode ::-webkit-scrollbar-button:vertical:end {
+.darkmode::-webkit-scrollbar-button:vertical:end {
   background-image: svg-load("./icon/dark/scrollbar-down.svg");
 }
 
@@ -162,7 +162,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-down-active.svg");
 }
-.darkmode ::-webkit-scrollbar-button:vertical:end:active {
+.darkmode::-webkit-scrollbar-button:vertical:end:active {
   background-image: svg-load("./icon/dark/scrollbar-down-active.svg");
 }
 
@@ -171,7 +171,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-left.svg");
 }
-.darkmode ::-webkit-scrollbar-button:horizontal:start {
+.darkmode::-webkit-scrollbar-button:horizontal:start {
   background-image: svg-load("./icon/dark/scrollbar-left.svg");
 }
 
@@ -180,7 +180,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-left-active.svg");
 }
-.darkmode ::-webkit-scrollbar-button:horizontal:start:active {
+.darkmode::-webkit-scrollbar-button:horizontal:start:active {
   background-image: svg-load("./icon/dark/scrollbar-left-active.svg");
 }
 
@@ -188,7 +188,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-right.svg");
 }
-.darkmode ::-webkit-scrollbar-button:horizontal:end {
+.darkmode::-webkit-scrollbar-button:horizontal:end {
   background-image: svg-load("./icon/dark/scrollbar-right.svg");
 }
 
@@ -197,7 +197,7 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-right-active.svg");
 }
-.darkmode ::-webkit-scrollbar-button:horizontal:end:active {
+.darkmode::-webkit-scrollbar-button:horizontal:end:active {
   background-image: svg-load("./icon/dark/scrollbar-right-active.svg");
 }
 
@@ -210,6 +210,10 @@ body {
 .darkmode body {
   background: linear-gradient(90deg, #000000 21px, transparent 1%) center,
     linear-gradient(#000000 21px, transparent 1%) center, #ffffff;
+}
+
+.darkmode body {
+  color: white;
 }
 
 a {
@@ -612,6 +616,7 @@ h2 {
   border-style: solid;
   border-width: 5.5px;
   border-image: url("./icon/dark/button.png") 30 stretch;
+  color: white;
 }
 
 .btn:active {
