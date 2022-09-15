@@ -137,7 +137,7 @@
   background-image: svg-load("./icon/scrollbar-up.svg");
 }
 .darkmode::-webkit-scrollbar-button:vertical:start {
-  background-image: svg-load("./icon/dark/scrollbar-up.svg");
+  background-image: svg-load("./icon/dark-scrollbar-up.svg");
 }
 
 ::-webkit-scrollbar-button:vertical:start:active {
@@ -146,7 +146,7 @@
   background-image: svg-load("./icon/scrollbar-up-active.svg");
 }
 .darkmode::-webkit-scrollbar-button:vertical:start:active {
-  background-image: svg-load("./icon/dark/scrollbar-up-active.svg");
+  background-image: svg-load("./icon/dark-scrollbar-up-active.svg");
 }
 
 ::-webkit-scrollbar-button:vertical:end {
@@ -154,7 +154,7 @@
   background-image: svg-load("./icon/scrollbar-down.svg");
 }
 .darkmode::-webkit-scrollbar-button:vertical:end {
-  background-image: svg-load("./icon/dark/scrollbar-down.svg");
+  background-image: svg-load("./icon/dark-scrollbar-down.svg");
 }
 
 ::-webkit-scrollbar-button:vertical:end:active {
@@ -163,7 +163,7 @@
   background-image: svg-load("./icon/scrollbar-down-active.svg");
 }
 .darkmode::-webkit-scrollbar-button:vertical:end:active {
-  background-image: svg-load("./icon/dark/scrollbar-down-active.svg");
+  background-image: svg-load("./icon/dark-scrollbar-down-active.svg");
 }
 
 ::-webkit-scrollbar-button:horizontal:start {
@@ -172,7 +172,7 @@
   background-image: svg-load("./icon/scrollbar-left.svg");
 }
 .darkmode::-webkit-scrollbar-button:horizontal:start {
-  background-image: svg-load("./icon/dark/scrollbar-left.svg");
+  background-image: svg-load("./icon/dark-scrollbar-left.svg");
 }
 
 ::-webkit-scrollbar-button:horizontal:start:active {
@@ -181,7 +181,7 @@
   background-image: svg-load("./icon/scrollbar-left-active.svg");
 }
 .darkmode::-webkit-scrollbar-button:horizontal:start:active {
-  background-image: svg-load("./icon/dark/scrollbar-left-active.svg");
+  background-image: svg-load("./icon/dark-scrollbar-left-active.svg");
 }
 
 ::-webkit-scrollbar-button:horizontal:end {
@@ -189,7 +189,7 @@
   background-image: svg-load("./icon/scrollbar-right.svg");
 }
 .darkmode::-webkit-scrollbar-button:horizontal:end {
-  background-image: svg-load("./icon/dark/scrollbar-right.svg");
+  background-image: svg-load("./icon/dark-scrollbar-right.svg");
 }
 
 ::-webkit-scrollbar-button:horizontal:end:active {
@@ -198,7 +198,7 @@
   background-image: svg-load("./icon/scrollbar-right-active.svg");
 }
 .darkmode::-webkit-scrollbar-button:horizontal:end:active {
-  background-image: svg-load("./icon/dark/scrollbar-right-active.svg");
+  background-image: svg-load("./icon/dark-scrollbar-right-active.svg");
 }
 
 body {
@@ -360,9 +360,6 @@ h2 {
   cursor: default;
   font-family: Chicago_12;
   color: #a5a5a5;
-}
-.darkmmode .inactive-title-bar .title {
-  color: #5a5a5a;
 }
 
 .title-bar button {
@@ -615,7 +612,7 @@ h2 {
   background: black;
   border-style: solid;
   border-width: 5.5px;
-  border-image: url("./icon/dark/button.png") 30 stretch;
+  border-image: url("./icon/dark-button.png") 30 stretch;
   color: white;
 }
 
@@ -628,7 +625,7 @@ h2 {
 .darkmode .btn:active {
   background: white;
   border-radius: 6px;
-  color: white;
+  color: black;
   font-family: Chicago_12;
 }
 
@@ -650,7 +647,7 @@ h2 {
   background: black;
   border-style: solid;
   border-width: 5.5px;
-  border-image: url("./icon/dark/button.png") 30 stretch;
+  border-image: url("./icon/dark-button.png") 30 stretch;
   color: #535353;
 }
 
@@ -663,6 +660,7 @@ input {
 }
 .darkmode input {
   border: 1.5px solid white;
+  background-color: #000;
 }
 
 input:focus {
@@ -674,8 +672,8 @@ input[type="radio"] + label::before {
   width: 20px;
   height: 20px;
 }
-.darkmmode input[type="radio"] + label::before {
-  border-image: svg-load("./icon/dark/radio-border.svg");
+.darkmode input[type="radio"] + label::before {
+  border-image: svg-load("./icon/dark-radio-border.svg");
 }
 
 input[type="checkbox"] + label::before {
@@ -683,7 +681,7 @@ input[type="checkbox"] + label::before {
   width: 20px;
   height: 20px;
 }
-.darkmmode input[type="checkbox"] + label::before {
+.darkmode input[type="checkbox"] + label::before {
   border: 1.5px solid white;
 }
 
@@ -721,15 +719,15 @@ input[type="radio"] + label::before {
   margin-right: var(--radio-label-spacing);
   background: svg-load("./icon/radio-border.svg");
 }
-.darkmmode input[type="radio"] + label::before {
-  background: svg-load("./icon/dark/radio-border.svg");
+.darkmode input[type="radio"] + label::before {
+  background: svg-load("./icon/dark-radio-border.svg");
 }
 
 input[type="radio"]:focus-visible + label::before {
   background-image: svg-load("./icon/radio-border-focused.svg");
 }
-.darkmmode input[type="radio"]:focus-visible + label::before {
-  background-image: svg-load("./icon/dark/radio-border-focused.svg");
+.darkmode input[type="radio"]:focus-visible + label::before {
+  background-image: svg-load("./icon/dark-radio-border-focused.svg");
 }
 
 input[type="radio"]:checked + label::after {
@@ -743,7 +741,7 @@ input[type="radio"]:checked + label::after {
   background: svg-load("./icon/radio-dot.svg");
 }
 .darkmode input[type="radio"]:checked + label::after {
-  background: svg-load("./icon/dark/radio-dot.svg");
+  background: svg-load("./icon/dark-radio-dot.svg");
 }
 
 input[type="checkbox"] + label {
@@ -766,7 +764,7 @@ input[type="checkbox"] + label::before {
 input[type="checkbox"]:focus-visible + label::before {
   outline: 1px solid black;
 }
-.darkmmode input[type="checkbox"]:focus-visible + label::before {
+.darkmode input[type="checkbox"]:focus-visible + label::before {
   outline: 1px solid white;
 }
 
@@ -783,8 +781,8 @@ input[type="checkbox"]:checked + label::after {
   background: svg-load("./icon/checkmark.svg");
   background-repeat: no-repeat;
 }
-.darkmmode input[type="checkbox"]:checked + label::after {
-  background: svg-load("./icon/dark/checkmark.svg");
+.darkmode input[type="checkbox"]:checked + label::after {
+  background: svg-load("./icon/dark-checkmark.svg");
   background-repeat: no-repeat;
 }
 
@@ -795,8 +793,8 @@ input[type="checkbox"][disabled] + label::before {
 input[type="checkbox"][disabled]:checked + label::after {
   background: svg-load("./icon/checkmark-disabled.svg");
 }
-.darkmmode input[type="checkbox"][disabled]:checked + label::after {
-  background: svg-load("./icon/dark/checkmark-disabled.svg");
+.darkmode input[type="checkbox"][disabled]:checked + label::after {
+  background: svg-load("./icon/dark-checkmark-disabled.svg");
 }
 
 .field-row {
@@ -823,8 +821,8 @@ input[type="checkbox"][disabled]:checked + label::after {
   display: inline-block;
   margin-right: 2px;
 }
-.darkmmode .apple {
-  background: svg-load("./icon/dark/apple.svg");
+.darkmode .apple {
+  background: svg-load("./icon/dark-apple.svg");
   background-repeat: no-repeat;
 }
 
@@ -853,13 +851,16 @@ select {
   -moz-box-shadow: 2px 8px 0 0px black;
   box-shadow: 2px 2px 0 -1px black;
 }
-.darkmmode select {
-  background-image: svg-load("./icon/dark/select-button.svg");
+.darkmode select {
+  background-color: #000;
+  background-image: svg-load("./icon/dark-select-button.svg");
   background-position: top 2px right 2px;
   background-repeat: no-repeat;
   -webkit-box-shadow: 2px 8px 0 0px white;
   -moz-box-shadow: 2px 8px 0 0px white;
   box-shadow: 2px 2px 0 -1px white;
+  border-color: white;
+  color: white;
 }
 
 /* menu-bar */
@@ -890,8 +891,8 @@ ul[role="menu-bar"] > [role="menu-item"]:hover {
   outline: none;
 }
 .darkmode ul[role="menu-bar"] > [role="menu-item"]:focus,
-ul[role="menu-bar"] > [role="menu-item"]:focus-within,
-ul[role="menu-bar"] > [role="menu-item"]:hover {
+.darkmode ul[role="menu-bar"] > [role="menu-item"]:focus-within,
+.darkmode ul[role="menu-bar"] > [role="menu-item"]:hover {
   background: #fff;
   color: #000;
 }
@@ -905,6 +906,7 @@ ul[role="menu"] {
 }
 .darkmode ul[role="menu"] {
   background: black;
+  color: white;
 }
 ul[role="menu"]::before {
   content: "";
@@ -943,12 +945,12 @@ ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
   background: #000;
   color: white;
 }
-.darkmmode ul[role="menu"] > [role="menu-item"] > a:hover,
-ul[role="menu"] > [role="menu-item"] > button:hover,
-ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover,
-ul[role="menu"] > [role="menu-item"] > a:focus,
-ul[role="menu"] > [role="menu-item"] > button:focus,
-ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
+.darkmode ul[role="menu"] > [role="menu-item"] > a:hover,
+.darkmode ul[role="menu"] > [role="menu-item"] > button:hover,
+.darkmode ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover,
+.darkmode ul[role="menu"] > [role="menu-item"] > a:focus,
+.darkmode ul[role="menu"] > [role="menu-item"] > button:focus,
+.darkmode ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
   background: #fff;
   color: black;
 }
@@ -973,4 +975,8 @@ ul [role="menu-item"].divider::after {
 /* styles specific to demo page */
 .menu-items > li {
   margin-bottom: 1rem;
+}
+
+.darkmode blockquote {
+  border-color: white;
 }
