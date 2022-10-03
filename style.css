@@ -46,7 +46,7 @@
 /* Fonts below are recreations by Giles Booth */
 @font-face {
   font-family: Chicago_12;
-  src: url("fonts/ChiKareGo2.ttf"); 
+  src: url("fonts/ChiKareGo2.ttf");
 }
 @font-face {
   font-family: Geneva_9;
@@ -410,6 +410,24 @@ input:focus  {
   outline:none;
 }
 
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible,
+input[type="number"]:focus-visible,
+input[type="date"]:focus-visible,
+input[type="time"]:focus-visible,
+input[type="datetime"]:focus-visible,
+input[type="datetime-local"]:focus-visible,
+input[type="month"]:focus-visible,
+input[type="week"]:focus-visible,
+input[type="search"]:focus-visible,
+input[type="tel"]:focus-visible,
+input[type="color"]:focus-visible,
+textarea:focus {
+  background: #000;
+  color: #fff;
+}
+
 input[type="radio"] + label::before {
   border-image: svg-load("./icon/radio-border.svg");
   width: 20px;
@@ -457,7 +475,8 @@ input[type="radio"] + label::before {
   background: svg-load("./icon/radio-border.svg");
 }
 
-input[type="radio"]:focus-visible + label::before {
+input[type="radio"]:focus-visible + label::before,
+input[type="radio"]:hover + label::before {
   background-image: svg-load("./icon/radio-border-focused.svg");
 }
 
@@ -489,7 +508,8 @@ input[type="checkbox"] + label::before {
   margin-right: var(--radio-label-spacing);
 }
 
-input[type="checkbox"]:focus-visible + label::before {
+input[type="checkbox"]:focus-visible + label::before,
+input[type="checkbox"]:hover + label::before {
   outline: 1px solid black;
 }
 
