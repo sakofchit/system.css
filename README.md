@@ -3,12 +3,12 @@
 
 [Documentation](https://sakofchit.github.io/system.css/)
 
-System.css is a CSS library for building interfaces that resemble Apple's System OS which ran from 1984-1991. Design-wise, not much really changed from System 1 to System 6; however this library is based on System 6 as it was the final monochrome version of MacOS.
+System.css is a CSS library for building interfaces that resemble Apple's System OS which ran from 1984-1991. Design-wise, not much really changed from System 1 to System 6; however, this library is based on System 6 as it was the final monochrome version of macOS.
 
 Fortunately, this library does not use any JavaScript and is compatible with any front-end framework of your choice. Most styles can also be overwritten to allow for deeper customization.
 
 ## Getting Started
-There's a couple ways you can get started with System.css!
+There are a couple of ways you can get started with System.css!
 
 **Import from CDN (easiest)**
 
@@ -80,7 +80,7 @@ Everything you'll need can be found in [style.css](https://github.com/sakofchit/
 
 Thanks for checking this project out! This library was made in good fun and was largely inspired by [98.css](https://github.com/jdan/98.css). The Chicago 12pt and Geneva 9pt fonts are recreations by [@blogmywiki](https://twitter.com/blogmywiki)
 
- System.css is still in beta! I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found [here](https://github.com/sakofchit/system.css/tree/main/icon).
+ System.css is still in beta! I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found [here](https://github.com/sakofchit/system.css/tree/main/icon).
 
 If you find a bug, consider opening an issue. If there's something that you'd like to add, please feel free to create a PR!
 
