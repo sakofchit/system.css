@@ -40,7 +40,7 @@
 }
 @font-face {
   font-family: Monaco;
-  src: url("fonts/monaco.ttf")
+  src: url("fonts/monaco.ttf");
 }
 
 /* Fonts below are recreations by Giles Booth */
@@ -50,20 +50,63 @@
 }
 @font-face {
   font-family: Geneva_9;
-  src: url("fonts/FindersKeepers.ttf")
+  src: url("fonts/FindersKeepers.ttf");
 }
+
 ::-webkit-scrollbar {
   width: 22px;
   background-color: #fff;
 }
+.darkmode::-webkit-scrollbar {
+  width: 22px;
+  background-color: #000;
+}
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background: linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
   background-color: white;
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
   width: 10px;
   border-left: 3px solid black;
+}
+.darkmode::-webkit-scrollbar-track {
+  background: linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    ),
+    linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    );
+  background-color: black;
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  width: 10px;
+  border-left: 3px solid white;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -71,6 +114,13 @@
   box-sizing: content-box;
   background-color: #fff;
   border: 2px solid black;
+  border-right: none;
+}
+.darkmode::-webkit-scrollbar-thumb {
+  width: 20px;
+  box-sizing: content-box;
+  background-color: #000;
+  border: 2px solid white;
   border-right: none;
 }
 
@@ -86,19 +136,34 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-up.svg");
 }
+.darkmode::-webkit-scrollbar-button:vertical:start {
+  background-image: svg-load("./icon/dark-scrollbar-up.svg");
+}
+
 ::-webkit-scrollbar-button:vertical:start:active {
   background-repeat: no-repeat;
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-up-active.svg");
 }
+.darkmode::-webkit-scrollbar-button:vertical:start:active {
+  background-image: svg-load("./icon/dark-scrollbar-up-active.svg");
+}
+
 ::-webkit-scrollbar-button:vertical:end {
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-down.svg");
 }
+.darkmode::-webkit-scrollbar-button:vertical:end {
+  background-image: svg-load("./icon/dark-scrollbar-down.svg");
+}
+
 ::-webkit-scrollbar-button:vertical:end:active {
   background-repeat: no-repeat;
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-down-active.svg");
+}
+.darkmode::-webkit-scrollbar-button:vertical:end:active {
+  background-image: svg-load("./icon/dark-scrollbar-down-active.svg");
 }
 
 ::-webkit-scrollbar-button:horizontal:start {
@@ -106,34 +171,64 @@
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-left.svg");
 }
+.darkmode::-webkit-scrollbar-button:horizontal:start {
+  background-image: svg-load("./icon/dark-scrollbar-left.svg");
+}
+
 ::-webkit-scrollbar-button:horizontal:start:active {
   background-repeat: no-repeat;
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-left-active.svg");
 }
+.darkmode::-webkit-scrollbar-button:horizontal:start:active {
+  background-image: svg-load("./icon/dark-scrollbar-left-active.svg");
+}
+
 ::-webkit-scrollbar-button:horizontal:end {
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-right.svg");
 }
+.darkmode::-webkit-scrollbar-button:horizontal:end {
+  background-image: svg-load("./icon/dark-scrollbar-right.svg");
+}
+
 ::-webkit-scrollbar-button:horizontal:end:active {
   background-repeat: no-repeat;
   height: 23.38px;
   background-image: svg-load("./icon/scrollbar-right-active.svg");
 }
+.darkmode::-webkit-scrollbar-button:horizontal:end:active {
+  background-image: svg-load("./icon/dark-scrollbar-right-active.svg");
+}
 
 body {
-  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center, linear-gradient(#ffffff 21px, transparent 1%) center, #000000;
+  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center,
+    linear-gradient(#ffffff 21px, transparent 1%) center, #000000;
   background-size: 22px 22px;
   background-attachment: fixed;
+}
+.darkmode body {
+  background: linear-gradient(90deg, #000000 21px, transparent 1%) center,
+    linear-gradient(#000000 21px, transparent 1%) center, #ffffff;
+}
+
+.darkmode body {
+  color: white;
 }
 
 a {
   color: black;
   text-decoration: underline;
 }
+.darkmode a {
+  color: white;
+}
 
 hr {
   border-top: 0.15em solid #000;
+}
+.darkmode hr {
+  border-top: 0.15em solid #fff;
 }
 
 /*.container {
@@ -167,14 +262,23 @@ h2 {
   box-shadow: var(--box-shadow);
   background-color: white;
 }
+.darkmode .standard-dialog {
+  background-color: black;
+}
 
-.modal-dialog, .alert-box {
+.modal-dialog,
+.alert-box {
   width: auto;
   padding: 13px;
   background: #fff;
 }
+.darkmode .modal-dialog,
+.darkmode .alert-box {
+  background: #000;
+}
 
-.modal-contents, .alert-contents {
+.modal-contents,
+.alert-contents {
   padding: 10px;
 }
 
@@ -197,6 +301,12 @@ h2 {
   border: 2px solid;
   padding: 3px;
 }
+.darkmode .inner-border {
+  border-color: white;
+}
+.darkmode .outer-border {
+  border-color: white;
+}
 
 /* title bar */
 .title-bar {
@@ -210,6 +320,11 @@ h2 {
   background-size: 6.6666666667% 13.3333333333%;
   background-clip: content-box;
 }
+.darkmode .title-bar {
+  background: linear-gradient(#fff 50%, transparent 50%);
+  background-size: 6.6666666667% 13.3333333333%;
+  background-clip: content-box;
+}
 .title-bar .title {
   padding: 0 0.5em;
   margin: 0 auto;
@@ -220,6 +335,9 @@ h2 {
   background: #fff;
   cursor: default;
   font-family: Chicago_12;
+}
+.darkmode .title-bar .title {
+  background: #000;
 }
 
 .inactive-title-bar {
@@ -241,7 +359,7 @@ h2 {
   text-align: center;
   cursor: default;
   font-family: Chicago_12;
-  color:#A5A5A5;
+  color: #a5a5a5;
 }
 
 .title-bar button {
@@ -255,13 +373,18 @@ h2 {
   cursor: pointer;
   transform: scale(0.5);
 }
+.darkmode .title-bar button {
+  border: 4px solid #fff;
+  background-color: #000;
+}
 .title-bar button span {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-.title-bar button.close::before, .title-bar button.close::after {
+.title-bar button.close::before,
+.title-bar button.close::after {
   content: "";
   position: absolute;
   top: 0;
@@ -271,27 +394,64 @@ h2 {
   opacity: 0;
 }
 .title-bar button.close::before {
-  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
+  background: linear-gradient(#000 0%, #000 100%) left center,
+    linear-gradient(#000 0%, #000 100%) right center,
+    linear-gradient(#000 0%, #000 100%) center top,
+    linear-gradient(#000 0%, #000 100%) center bottom;
+  background-size: 30% 4px, 30% 4px, 4px 30%, 4px 30%;
+  background-repeat: no-repeat;
+}
+.darkmode .title-bar button.close::before {
+  background: linear-gradient(#fff 0%, #fff 100%) left center,
+    linear-gradient(#fff 0%, #fff 100%) right center,
+    linear-gradient(#fff 0%, #fff 100%) center top,
+    linear-gradient(#fff 0%, #fff 100%) center bottom;
   background-size: 30% 4px, 30% 4px, 4px 30%, 4px 30%;
   background-repeat: no-repeat;
 }
 .title-bar button.close::after {
-  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
-  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px, 3.6363636364px 22.5%, 3.6363636364px 22.5%;
+  background: linear-gradient(#000 0%, #000 100%) left center,
+    linear-gradient(#000 0%, #000 100%) right center,
+    linear-gradient(#000 0%, #000 100%) center top,
+    linear-gradient(#000 0%, #000 100%) center bottom;
+  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px,
+    3.6363636364px 22.5%, 3.6363636364px 22.5%;
   background-repeat: no-repeat;
   transform: rotate(45deg) scale(1.1);
 }
-.title-bar button.close:active::before, .title-bar button.close:active::after {
+.darkmode .title-bar button.close::after {
+  background: linear-gradient(#fff 0%, #fff 100%) left center,
+    linear-gradient(#fff 0%, #fff 100%) right center,
+    linear-gradient(#fff 0%, #fff 100%) center top,
+    linear-gradient(#fff 0%, #fff 100%) center bottom;
+  background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px,
+    3.6363636364px 22.5%, 3.6363636364px 22.5%;
+  background-repeat: no-repeat;
+  transform: rotate(45deg) scale(1.1);
+}
+.title-bar button.close:active::before,
+.title-bar button.close:active::after {
   opacity: 1;
 }
 .title-bar button.resize {
-  background: linear-gradient(#000 0%, #000 100%) left 58%, linear-gradient(to bottom, #000 0%, #000 100%) 58% top;
+  background: linear-gradient(#000 0%, #000 100%) left 58%,
+    linear-gradient(to bottom, #000 0%, #000 100%) 58% top;
   background-size: 60% 4px, 4px 60%;
   background-repeat: no-repeat;
   background-color: #fff;
 }
+.darkmode .title-bar button.resize {
+  background: linear-gradient(#fff 0%, #fff 100%) left 58%,
+    linear-gradient(to bottom, #fff 0%, #fff 100%) 58% top;
+  background-size: 60% 4px, 4px 60%;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
 .title-bar button.resize:active {
   background: #fff;
+}
+.darkmode .title-bar button.resize:active {
+  background: #000;
 }
 .title-bar button.hidden {
   visibility: hidden;
@@ -306,6 +466,10 @@ h2 {
   border: 0.1em solid #000;
   font-family: "Inconsolata", Menlo, Chicago, Geneva;
 }
+.darkmode .window {
+  background-color: #000;
+  border: 0.1em solid #fff;
+}
 .window-pane {
   overflow-y: scroll;
   height: 100%;
@@ -318,19 +482,68 @@ h2 {
   width: 22px;
   background-color: #fff;
 }
+.darkmode .window-pane::-webkit-scrollbar {
+  width: 22px;
+  background-color: #000;
+}
 .window-pane::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background: linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
   background-color: white;
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
   width: 10px;
   border-left: 4px solid black;
 }
+.darkmode .window-pane::-webkit-scrollbar-track {
+  background: linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    ),
+    linear-gradient(
+      45deg,
+      #fff 25%,
+      transparent 25%,
+      transparent 75%,
+      #fff 75%,
+      #fff
+    );
+  background-color: black;
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  width: 10px;
+  border-left: 4px solid white;
+}
 .window-pane::-webkit-scrollbar-thumb {
   width: 20px;
   box-sizing: content-box;
   background-color: #fff;
   border: 2px solid black;
+  border-right: none;
+}
+.darkmode .window-pane::-webkit-scrollbar-thumb {
+  width: 20px;
+  box-sizing: content-box;
+  background-color: #000;
+  border: 2px solid white;
   border-right: none;
 }
 
@@ -341,6 +554,16 @@ h2 {
   justify-content: space-between;
   /*padding: 0.4rem 0.8rem;*/
   border-top: 0.1rem solid black;
+  border-width: 0.1rem 0;
+  font-size: 1rem;
+}
+.darkmode .separator {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*padding: 0.4rem 0.8rem;*/
+  border-top: 0.1rem solid white;
   border-width: 0.1rem 0;
   font-size: 1rem;
 }
@@ -356,14 +579,24 @@ h2 {
   font-size: 1rem;
   font-weight: 100;
 }
-
+.darkmode .details-bar {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.4rem 0.8rem;
+  border: 0.1rem solid white;
+  border-width: 0.1rem 0;
+  font-size: 1rem;
+  font-weight: 100;
+}
 
 /* buttons */
 .btn {
   min-height: 20px;
   min-width: 59px;
   padding: 0 20px;
-  text-align:center;
+  text-align: center;
   background: white;
   border-style: solid;
   border-width: 5.5px;
@@ -375,39 +608,63 @@ h2 {
   font-family: Chicago_12;
   cursor: pointer;
 }
+.darkmode .btn {
+  background: black;
+  border-style: solid;
+  border-width: 5.5px;
+  border-image: url("./icon/dark-button.png") 30 stretch;
+  color: white;
+}
 
 .btn:active {
   background: black;
-  border-radius:6px;
+  border-radius: 6px;
   color: white;
+  font-family: Chicago_12;
+}
+.darkmode .btn:active {
+  background: white;
+  border-radius: 6px;
+  color: black;
   font-family: Chicago_12;
 }
 
 .btn:disabled {
   min-height: 20px;
   min-width: 59px;
-  text-align:center;
+  text-align: center;
   background: white;
   border-style: solid;
   border-width: 5.5px;
   border-image: url("./icon/button.png") 30 stretch;
-  color: #B6B7B8;
+  color: #b6b7b8;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
   font-family: Chicago_12;
 }
+.darkmode .btn:disabled {
+  background: black;
+  border-style: solid;
+  border-width: 5.5px;
+  border-image: url("./icon/dark-button.png") 30 stretch;
+  color: #535353;
+}
 
 /* text input */
-input  {
+input {
   border: 1.5px solid black;
   font-family: Chicago_12;
   font-size: 18px;
   padding-left: 5px;
 }
+.darkmode input {
+  border: 1.5px solid white;
+  background-color: #000;
+}
 
-input:focus  {
-  outline:none;
+input:focus {
+  outline: none;
 }
 
 input[type="text"]:focus-visible,
@@ -433,11 +690,17 @@ input[type="radio"] + label::before {
   width: 20px;
   height: 20px;
 }
+.darkmode input[type="radio"] + label::before {
+  border-image: svg-load("./icon/dark-radio-border.svg");
+}
 
 input[type="checkbox"] + label::before {
   border: 1.5px solid black;
   width: 20px;
   height: 20px;
+}
+.darkmode input[type="checkbox"] + label::before {
+  border: 1.5px solid white;
 }
 
 input[type="radio"],
@@ -474,10 +737,16 @@ input[type="radio"] + label::before {
   margin-right: var(--radio-label-spacing);
   background: svg-load("./icon/radio-border.svg");
 }
+.darkmode input[type="radio"] + label::before {
+  background: svg-load("./icon/dark-radio-border.svg");
+}
 
 input[type="radio"]:focus-visible + label::before,
 input[type="radio"]:hover + label::before {
   background-image: svg-load("./icon/radio-border-focused.svg");
+}
+.darkmode input[type="radio"]:focus-visible + label::before {
+  background-image: svg-load("./icon/dark-radio-border-focused.svg");
 }
 
 input[type="radio"]:checked + label::after {
@@ -489,6 +758,9 @@ input[type="radio"]:checked + label::after {
   left: var(--radio-dot-left);
   position: absolute;
   background: svg-load("./icon/radio-dot.svg");
+}
+.darkmode input[type="radio"]:checked + label::after {
+  background: svg-load("./icon/dark-radio-dot.svg");
 }
 
 input[type="checkbox"] + label {
@@ -512,6 +784,9 @@ input[type="checkbox"]:focus-visible + label::before,
 input[type="checkbox"]:hover + label::before {
   outline: 1px solid black;
 }
+.darkmode input[type="checkbox"]:focus-visible + label::before {
+  outline: 1px solid white;
+}
 
 input[type="checkbox"]:checked + label::after {
   content: "";
@@ -526,7 +801,10 @@ input[type="checkbox"]:checked + label::after {
   background: svg-load("./icon/checkmark.svg");
   background-repeat: no-repeat;
 }
-
+.darkmode input[type="checkbox"]:checked + label::after {
+  background: svg-load("./icon/dark-checkmark.svg");
+  background-repeat: no-repeat;
+}
 
 input[type="checkbox"][disabled] + label::before {
   background: var(--surface);
@@ -534,6 +812,9 @@ input[type="checkbox"][disabled] + label::before {
 
 input[type="checkbox"][disabled]:checked + label::after {
   background: svg-load("./icon/checkmark-disabled.svg");
+}
+.darkmode input[type="checkbox"][disabled]:checked + label::after {
+  background: svg-load("./icon/dark-checkmark-disabled.svg");
 }
 
 .field-row {
@@ -560,11 +841,15 @@ input[type="checkbox"][disabled]:checked + label::after {
   display: inline-block;
   margin-right: 2px;
 }
+.darkmode .apple {
+  background: svg-load("./icon/dark-apple.svg");
+  background-repeat: no-repeat;
+}
 
 /* Form */
 form {
   font-family: "Inconsolata", Menlo, Chicago, Geneva;
-  font-size:14px;
+  font-size: 14px;
 }
 
 /* select menu */
@@ -583,8 +868,19 @@ select {
   position: relative;
   padding-left: 20px;
   -webkit-box-shadow: 2px 8px 0 0px black;
-	   -moz-box-shadow: 2px 8px 0 0px black;
-	        box-shadow: 2px 2px 0 -1px black;
+  -moz-box-shadow: 2px 8px 0 0px black;
+  box-shadow: 2px 2px 0 -1px black;
+}
+.darkmode select {
+  background-color: #000;
+  background-image: svg-load("./icon/dark-select-button.svg");
+  background-position: top 2px right 2px;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 2px 8px 0 0px white;
+  -moz-box-shadow: 2px 8px 0 0px white;
+  box-shadow: 2px 2px 0 -1px white;
+  border-color: white;
+  color: white;
 }
 
 /* menu-bar */
@@ -600,14 +896,25 @@ ul[role="menu-bar"] {
   display: flex;
   background: white;
 }
+.darkmode ul[role="menu-bar"] {
+  background: black;
+}
 ul[role="menu-bar"] > [role="menu-item"] {
   position: relative;
   padding: 6px 10px;
 }
-ul[role="menu-bar"] > [role="menu-item"]:focus, ul[role="menu-bar"] > [role="menu-item"]:focus-within, ul[role="menu-bar"] > [role="menu-item"]:hover {
+ul[role="menu-bar"] > [role="menu-item"]:focus,
+ul[role="menu-bar"] > [role="menu-item"]:focus-within,
+ul[role="menu-bar"] > [role="menu-item"]:hover {
   background: #000;
   color: #fff;
   outline: none;
+}
+.darkmode ul[role="menu-bar"] > [role="menu-item"]:focus,
+.darkmode ul[role="menu-bar"] > [role="menu-item"]:focus-within,
+.darkmode ul[role="menu-bar"] > [role="menu-item"]:hover {
+  background: #fff;
+  color: #000;
 }
 ul[role="menu"] {
   position: relative;
@@ -617,6 +924,10 @@ ul[role="menu"] {
   border: 1px solid;
   box-shadow: var(--box-shadow);
 }
+.darkmode ul[role="menu"] {
+  background: black;
+  color: white;
+}
 ul[role="menu"]::before {
   content: "";
   pointer-events: none;
@@ -625,6 +936,9 @@ ul[role="menu"]::before {
   width: 2px;
   box-shadow: inset 1px 0 rgba(0, 0, 0, 0.15), inset -1px 0 #fff;
 }
+.darkmode ul[role="menu"]::before {
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.15), inset -1px 0 #000;
+}
 [role="menu-item"] ul[role="menu"] {
   display: none;
   position: absolute;
@@ -632,23 +946,39 @@ ul[role="menu"]::before {
   top: 100%;
   z-index: 99;
 }
-ul[role="menu"] > [role="menu-item"] > a, ul[role="menu"] > [role="menu-item"] > button, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"] {
+ul[role="menu"] > [role="menu-item"] > a,
+ul[role="menu"] > [role="menu-item"] > button,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"] {
   all: unset;
   position: relative;
   padding: 5px 20px;
   display: block;
   width: 100%;
   box-sizing: border-box;
-
 }
-ul[role="menu"] > [role="menu-item"] > a:hover, ul[role="menu"] > [role="menu-item"] > button:hover, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover, ul[role="menu"] > [role="menu-item"] > a:focus, ul[role="menu"] > [role="menu-item"] > button:focus, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
+ul[role="menu"] > [role="menu-item"] > a:hover,
+ul[role="menu"] > [role="menu-item"] > button:hover,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover,
+ul[role="menu"] > [role="menu-item"] > a:focus,
+ul[role="menu"] > [role="menu-item"] > button:focus,
+ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
   background: #000;
   color: white;
+}
+.darkmode ul[role="menu"] > [role="menu-item"] > a:hover,
+.darkmode ul[role="menu"] > [role="menu-item"] > button:hover,
+.darkmode ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover,
+.darkmode ul[role="menu"] > [role="menu-item"] > a:focus,
+.darkmode ul[role="menu"] > [role="menu-item"] > button:focus,
+.darkmode ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
+  background: #fff;
+  color: black;
 }
 ul [role="menu-item"] {
   position: relative;
 }
-ul [role="menu-item"]:focus > [role="menu"], ul [role="menu-item"]:focus-within > [role="menu"] {
+ul [role="menu-item"]:focus > [role="menu"],
+ul [role="menu-item"]:focus-within > [role="menu"] {
   display: block;
 }
 ul [role="menu-item"].divider::after {
@@ -658,8 +988,15 @@ ul [role="menu-item"].divider::after {
   padding: 0;
   border-top: 1.5px dotted #000;
 }
+.darkmode ul [role="menu-item"].divider::after {
+  border-top: 1.5px dotted #fff;
+}
 
 /* styles specific to demo page */
 .menu-items > li {
   margin-bottom: 1rem;
+}
+
+.darkmode blockquote {
+  border-color: white;
 }
