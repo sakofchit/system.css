@@ -32,6 +32,21 @@
   --checkmark-width: 12px;
   --checkmark-top: 2px;
   --checkmark-left: 2px;
+
+  /* ---- ⚫️ Colors ⚪️ ---- */
+  /* Base Tokens */
+  --sys-color-white: #FFFFFF;
+  --sys-color-black: #000000;
+  --sys-color-grey: #A5A5A5;
+  --sys-color-darkgrey: #B6B7B8;
+
+  /* Theme Tokens */
+  --primary: var(--sys-color-white);
+  --secondary: var(--sys-color-black);
+  --tertiary: var(--sys-color-grey);
+
+  /* Component Tokens */
+  --disabled: var(--sys-color-darkgrey);
 }
 
 @font-face {
@@ -54,23 +69,23 @@
 }
 ::-webkit-scrollbar {
   width: 22px;
-  background-color: #fff;
+  background-color: var(--primary);
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
-  background-color: white;
+  background: linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary)), linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary));
+  background-color: var(--primary);
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
   width: 10px;
-  border-left: 3px solid black;
+  border-left: 3px solid var(--secondary);
 }
 
 ::-webkit-scrollbar-thumb {
   width: 20px;
   box-sizing: content-box;
-  background-color: #fff;
-  border: 2px solid black;
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
   border-right: none;
 }
 
@@ -122,18 +137,18 @@
 }
 
 body {
-  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center, linear-gradient(#ffffff 21px, transparent 1%) center, #000000;
+  background: linear-gradient(90deg, var(--primary) 21px, transparent 1%) center, linear-gradient(var(--primary) 21px, transparent 1%) center, var(--secondary);
   background-size: 22px 22px;
   background-attachment: fixed;
 }
 
 a {
-  color: black;
+  color: var(--secondary);
   text-decoration: underline;
 }
 
 hr {
-  border-top: 0.15em solid #000;
+  border-top: 0.15em solid var(--secondary);
 }
 
 /*.container {
@@ -165,13 +180,13 @@ h2 {
   border: 2px solid;
   padding: 10px;
   box-shadow: var(--box-shadow);
-  background-color: white;
+  background-color: var(--primary);
 }
 
 .modal-dialog, .alert-box {
   width: auto;
   padding: 13px;
-  background: #fff;
+  background: var(--primary);
 }
 
 .modal-contents, .alert-contents {
@@ -186,14 +201,14 @@ h2 {
 }
 
 .inner-border {
-  border-color: black;
+  border-color: var(--secondary);
   border-top: 3.5px solid;
   border-bottom: 3.5px solid;
   border-left: 5px solid;
   border-right: 5px solid;
 }
 .outer-border {
-  border-color: black;
+  border-color: var(--secondary);
   border: 2px solid;
   padding: 3px;
 }
@@ -206,7 +221,7 @@ h2 {
   height: 1.5rem;
   margin: 0.1rem 0;
   padding: 0.2rem 0.1rem;
-  background: linear-gradient(#000 50%, transparent 50%);
+  background: linear-gradient(var(--secondary) 50%, transparent 50%);
   background-size: 6.6666666667% 13.3333333333%;
   background-clip: content-box;
 }
@@ -217,7 +232,7 @@ h2 {
   font-weight: bold;
   line-height: 1.1;
   text-align: center;
-  background: #fff;
+  background: var(--primary);
   cursor: default;
   font-family: Chicago_12;
 }
@@ -241,7 +256,7 @@ h2 {
   text-align: center;
   cursor: default;
   font-family: Chicago_12;
-  color:#A5A5A5;
+  color: var(--tertiary);
 }
 
 .title-bar button {
@@ -250,8 +265,8 @@ h2 {
   width: 40px;
   height: 40px;
   margin: 0 0.2rem;
-  border: 4px solid #000;
-  background-color: #fff;
+  border: 4px solid var(--secondary);
+  background-color: var(--primary);
   cursor: pointer;
   transform: scale(0.5);
 }
@@ -271,12 +286,12 @@ h2 {
   opacity: 0;
 }
 .title-bar button.close::before {
-  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
+  background: linear-gradient(var(--secondary) 0%, var(--secondary) 100%) left center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) right center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center top, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center bottom;
   background-size: 30% 4px, 30% 4px, 4px 30%, 4px 30%;
   background-repeat: no-repeat;
 }
 .title-bar button.close::after {
-  background: linear-gradient(#000 0%, #000 100%) left center, linear-gradient(#000 0%, #000 100%) right center, linear-gradient(#000 0%, #000 100%) center top, linear-gradient(#000 0%, #000 100%) center bottom;
+  background: linear-gradient(var(--secondary) 0%, var(--secondary) 100%) left center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) right center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center top, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center bottom;
   background-size: 22.5% 3.6363636364px, 22.5% 3.6363636364px, 3.6363636364px 22.5%, 3.6363636364px 22.5%;
   background-repeat: no-repeat;
   transform: rotate(45deg) scale(1.1);
@@ -285,13 +300,13 @@ h2 {
   opacity: 1;
 }
 .title-bar button.resize {
-  background: linear-gradient(#000 0%, #000 100%) left 58%, linear-gradient(to bottom, #000 0%, #000 100%) 58% top;
+  background: linear-gradient(var(--secondary) 0%, var(--secondary) 100%) left 58%, linear-gradient(to bottom, var(--secondary) 0%, var(--secondary) 100%) 58% top;
   background-size: 60% 4px, 4px 60%;
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-color: var(--primary);
 }
 .title-bar button.resize:active {
-  background: #fff;
+  background: var(--primary);
 }
 .title-bar button.hidden {
   visibility: hidden;
@@ -302,8 +317,8 @@ h2 {
   margin: 1rem;
   min-width: 320px;
   overflow: hidden;
-  background-color: #fff;
-  border: 0.1em solid #000;
+  background-color: var(--primary);
+  border: 0.1em solid var(--secondary);
   font-family: "Inconsolata", Menlo, Chicago, Geneva;
 }
 .window-pane {
@@ -316,21 +331,21 @@ h2 {
 }
 .window-pane::-webkit-scrollbar {
   width: 22px;
-  background-color: #fff;
+  background-color: var(--primary);
 }
 .window-pane::-webkit-scrollbar-track {
-  background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
-  background-color: white;
+  background: linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary)), linear-gradient(45deg, var(--secondary) 25%, transparent 25%, transparent 75%, var(--secondary) 75%, var(--secondary));
+  background-color: var(--primary);
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
   width: 10px;
-  border-left: 4px solid black;
+  border-left: 4px solid var(--secondary);
 }
 .window-pane::-webkit-scrollbar-thumb {
   width: 20px;
   box-sizing: content-box;
-  background-color: #fff;
-  border: 2px solid black;
+  background-color: var(--primary);
+  border: 2px solid var(--secondary);
   border-right: none;
 }
 
@@ -340,7 +355,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   /*padding: 0.4rem 0.8rem;*/
-  border-top: 0.1rem solid black;
+  border-top: 0.1rem solid var(--secondary);
   border-width: 0.1rem 0;
   font-size: 1rem;
 }
@@ -351,7 +366,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   padding: 0.4rem 0.8rem;
-  border: 0.1rem solid black;
+  border: 0.1rem solid var(--secondary);
   border-width: 0.1rem 0;
   font-size: 1rem;
   font-weight: 100;
@@ -364,11 +379,11 @@ h2 {
   min-width: 59px;
   padding: 0 20px;
   text-align:center;
-  background: white;
+  background: var(--primary);
   border-style: solid;
   border-width: 5.5px;
   border-image: url("./icon/button.png") 30 stretch;
-  color: black;
+  color: var(--secondary);
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -377,9 +392,9 @@ h2 {
 }
 
 .btn:active {
-  background: black;
+  background: var(--secondary);
   border-radius:6px;
-  color: white;
+  color: var(--primary);
   font-family: Chicago_12;
 }
 
@@ -387,11 +402,11 @@ h2 {
   min-height: 20px;
   min-width: 59px;
   text-align:center;
-  background: white;
+  background: var(--primary);
   border-style: solid;
   border-width: 5.5px;
   border-image: url("./icon/button.png") 30 stretch;
-  color: #B6B7B8;
+  color: var(--disabled);
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -400,7 +415,7 @@ h2 {
 
 /* text input */
 input  {
-  border: 1.5px solid black;
+  border: 1.5px solid var(--secondary);
   font-family: Chicago_12;
   font-size: 18px;
   padding-left: 5px;
@@ -424,8 +439,8 @@ input[type="search"]:focus-visible,
 input[type="tel"]:focus-visible,
 input[type="color"]:focus-visible,
 textarea:focus {
-  background: #000;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--primary);
 }
 
 input[type="radio"] + label::before {
@@ -435,7 +450,7 @@ input[type="radio"] + label::before {
 }
 
 input[type="checkbox"] + label::before {
-  border: 1.5px solid black;
+  border: 1.5px solid var(--secondary);
   width: 20px;
   height: 20px;
 }
@@ -510,7 +525,7 @@ input[type="checkbox"] + label::before {
 
 input[type="checkbox"]:focus-visible + label::before,
 input[type="checkbox"]:hover + label::before {
-  outline: 1px solid black;
+  outline: 1px solid var(--secondary);
 }
 
 input[type="checkbox"]:checked + label::after {
@@ -582,9 +597,9 @@ select {
   -moz-appearance: none;
   position: relative;
   padding-left: 20px;
-  -webkit-box-shadow: 2px 8px 0 0px black;
-	   -moz-box-shadow: 2px 8px 0 0px black;
-	        box-shadow: 2px 2px 0 -1px black;
+  -webkit-box-shadow: 2px 8px 0 0px var(--secondary);
+	   -moz-box-shadow: 2px 8px 0 0px var(--secondary);
+	        box-shadow: 2px 2px 0 -1px var(--secondary);
 }
 
 /* menu-bar */
@@ -598,21 +613,21 @@ ul[role] {
 }
 ul[role="menu-bar"] {
   display: flex;
-  background: white;
+  background: var(--primary);
 }
 ul[role="menu-bar"] > [role="menu-item"] {
   position: relative;
   padding: 6px 10px;
 }
 ul[role="menu-bar"] > [role="menu-item"]:focus, ul[role="menu-bar"] > [role="menu-item"]:focus-within, ul[role="menu-bar"] > [role="menu-item"]:hover {
-  background: #000;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--primary);
   outline: none;
 }
 ul[role="menu"] {
   position: relative;
   min-width: 200px;
-  background: white;
+  background: var(--primary);
   color: initial;
   border: 1px solid;
   box-shadow: var(--box-shadow);
@@ -623,7 +638,7 @@ ul[role="menu"]::before {
   position: absolute;
   left: 28px;
   width: 2px;
-  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.15), inset -1px 0 #fff;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.15), inset -1px 0 var(--primary);
 }
 [role="menu-item"] ul[role="menu"] {
   display: none;
@@ -642,8 +657,8 @@ ul[role="menu"] > [role="menu-item"] > a, ul[role="menu"] > [role="menu-item"] >
 
 }
 ul[role="menu"] > [role="menu-item"] > a:hover, ul[role="menu"] > [role="menu-item"] > button:hover, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:hover, ul[role="menu"] > [role="menu-item"] > a:focus, ul[role="menu"] > [role="menu-item"] > button:focus, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"]:focus {
-  background: #000;
-  color: white;
+  background: var(--secondary);
+  color: var(--primary);
 }
 ul [role="menu-item"] {
   position: relative;
@@ -656,7 +671,7 @@ ul [role="menu-item"].divider::after {
   pointer-events: none;
   display: block;
   padding: 0;
-  border-top: 1.5px dotted #000;
+  border-top: 1.5px dotted var(--secondary);
 }
 
 /* styles specific to demo page */
