@@ -116,6 +116,9 @@ blockquote footer {
 summary {
   font-size: 14px;
   padding-top: 10px;
+  cursor: pointer;
+  margin: 12px 0 0 0;
+  width: 30%;
 }
 
 pre {
