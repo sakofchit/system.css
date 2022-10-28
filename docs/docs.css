@@ -30,12 +30,13 @@ body {
 
 aside {
   width: 200px;
-  position: fixed;
-  top: 0;
+  position: sticky;
+  top: 18px;
   bottom: 0;
   padding: 8px;
   display: flex;
   align-items: stretch;
+  height: calc(100vh - 36px);
 }
 
 html {
