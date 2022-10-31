@@ -379,7 +379,7 @@ h2 {
   min-width: 59px;
   padding: 0 20px;
   text-align:center;
-  background: var(--primary);
+  background: #B6D4E9;
   border-style: solid;
   border-width: 5.5px;
   border-image: url("./icon/button.png") 30 stretch;
