@@ -391,11 +391,6 @@ h2 {
   cursor: pointer;
 }
 
-.btn-default {
-  border-image: url("./icon/button-default.svg") 60 stretch;
-  border-width: 0.7em;
-}
-
 .btn:active {
   background: var(--secondary);
   border-radius:6px;
@@ -416,6 +411,15 @@ h2 {
   text-decoration: none;
   font-size: 18px;
   font-family: Chicago_12;
+}
+
+.btn-default {
+  border-image: url("./icon/button-default.svg") 60 stretch;
+  border-width: 0.5em;
+}
+
+.btn-default:active {
+  border-radius: 12px;
 }
 
 /* text input */
