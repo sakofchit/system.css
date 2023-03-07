@@ -197,11 +197,14 @@
                 </blockquote>
 
                 <p>A menu bar consists of menu elements that name menu items and they typically have a dropdown menu associated with them.</p>
+                <p>In case of a menu item as a single children or plain text with no menu dropdown associated with it, use <code>aria-haspopup="false"</code> attribute.</p>
 
                 <p>To create a menu bar we will use the <code>.menu-bar</code> class. </p>
 
                 <%- example(`
                 <ul role="menu-bar">
+                  <li role="menu-item" tabindex="0" aria-haspopup="false">Single Item</li>
+                  <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href="https://github.com/sakofchit/system.css">System.css on GitHub</a></li>
                   <li role="menu-item" tabindex="0" aria-haspopup="true">
                     File
                     <ul role="menu">
