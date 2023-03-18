@@ -637,6 +637,11 @@ ul[role="menu-bar"] > [role="menu-item"]:focus, ul[role="menu-bar"] > [role="men
   color: var(--primary);
   outline: none;
 }
+ul[role="menu-bar"] > [role="menu-item"][aria-haspopup="false"] * {
+  color: inherit;
+  background: inherit;
+  text-decoration: none;
+}
 ul[role="menu"] {
   position: relative;
   min-width: 200px;
