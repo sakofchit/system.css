@@ -1,6 +1,6 @@
 {
   "name": "@sakun/system.css",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A design system for building retro Apple interfaces",
   "main": "dist/system.css",
   "directories": {
