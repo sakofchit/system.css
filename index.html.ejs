@@ -197,7 +197,7 @@
                 </blockquote>
 
                 <p>A menu bar consists of menu elements that name menu items and they typically have a dropdown menu associated with them.</p>
-
+                
                 <p>To create a menu bar we will use the <code>.menu-bar</code> class. </p>
 
                 <%- example(`
@@ -237,6 +237,14 @@
                     </ul>
                   </li>
                 </ul>
+                `)%>
+
+                <p>In case of a menu item as a single children or plain text with no menu dropdown associated with it, use <code>aria-haspopup="false"</code> attribute.</p>
+                <%- example(`
+                  <ul role="menu-bar">
+                    <li role="menu-item" tabindex="0" aria-haspopup="false">Single Item</li>
+                    <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href="https://github.com/sakofchit/system.css">System.css on GitHub</a></li>
+                  </ul>
                 `)%>
 
                 <p>We can also manipulate a menu bar into a standard dropdown.</p>

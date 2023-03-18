@@ -242,7 +242,7 @@
                 </blockquote>
 
                 <p>A menu bar consists of menu elements that name menu items and they typically have a dropdown menu associated with them.</p>
-
+                
                 <p>To create a menu bar we will use the <code>.menu-bar</code> class. </p>
 
                 <div class="example">
@@ -319,6 +319,21 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Idea<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+      </details>
+    </div>
+
+                <p>In case of a menu item as a single children or plain text with no menu dropdown associated with it, use <code>aria-haspopup="false"</code> attribute.</p>
+                <div class="example">
+      <ul role="menu-bar">
+  <li role="menu-item" tabindex="0" aria-haspopup="false">Single Item</li>
+  <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href="https://github.com/sakofchit/system.css">System.css on GitHub</a></li>
+</ul>
+      <details>
+        <summary>Show code</summary>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-bar&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>Single Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/sakofchit/system.css&quot;</span>&gt;</span>System.css on GitHub<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
       </details>
     </div>
