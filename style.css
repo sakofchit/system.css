@@ -51,24 +51,20 @@
 
 @font-face {
   font-family: Chicago;
-  src: url("fonts/ChicagoFLF.woff") format("woff");
   src: url("fonts/ChicagoFLF.woff2") format("woff2");
 }
 @font-face {
   font-family: Monaco;
-  src: url("fonts/monaco.woff") format("woff");
   src: url("fonts/monaco.woff2") format("woff2");
 }
 
 /* Fonts below are recreations by Giles Booth */
 @font-face {
   font-family: Chicago_12;
-  src: url("fonts/ChiKareGo2.woff") format("woff");
   src: url("fonts/ChiKareGo2.woff2") format("woff2");
 }
 @font-face {
   font-family: Geneva_9;
-  src: url("fonts/FindersKeepers.woff") format("woff");
   src: url("fonts/FindersKeepers.woff2") format("woff2");
 }
 ::-webkit-scrollbar {
