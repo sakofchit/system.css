@@ -43,7 +43,6 @@ html {
   font-size: 18px;
   letter-spacing: -0.025em;
   min-height: 100vh;
-  scroll-behavior:smooth;
 }
 
 h3 {
