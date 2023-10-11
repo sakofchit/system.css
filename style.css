@@ -147,8 +147,11 @@ body {
 }
 
 a {
-  color: var(--secondary);
-  text-decoration: underline;
+  /* color: var(--secondary); */
+  color:#332c2c;
+  font-weight: bold;
+  text-decoration: none;
+
 }
 
 hr {
@@ -174,6 +177,7 @@ h2 {
 
 /* buttons */
 .standard-button {
+  border-radius: 30PX;
   display: block;
   min-width: 59px;
   min-height: 20px;
@@ -225,7 +229,8 @@ h2 {
   height: 1.5rem;
   margin: 0.1rem 0;
   padding: 0.2rem 0.1rem;
-  background: linear-gradient(var(--secondary) 50%, transparent 50%);
+  /* background: linear-gradient(var(--secondary) 50%, transparent 50%); */
+  background-color: white;
   background-size: 6.6666666667% 13.3333333333%;
   background-clip: content-box;
 }
@@ -282,6 +287,7 @@ h2 {
 }
 .title-bar button.close::before, .title-bar button.close::after {
   content: "";
+  border-radius: 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -293,6 +299,7 @@ h2 {
   background: linear-gradient(var(--secondary) 0%, var(--secondary) 100%) left center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) right center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center top, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center bottom;
   background-size: 30% 4px, 30% 4px, 4px 30%, 4px 30%;
   background-repeat: no-repeat;
+  border-radius: 100px;
 }
 .title-bar button.close::after {
   background: linear-gradient(var(--secondary) 0%, var(--secondary) 100%) left center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) right center, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center top, linear-gradient(var(--secondary) 0%, var(--secondary) 100%) center bottom;
@@ -304,13 +311,17 @@ h2 {
   opacity: 1;
 }
 .title-bar button.resize {
-  background: linear-gradient(var(--secondary) 0%, var(--secondary) 100%) left 58%, linear-gradient(to bottom, var(--secondary) 0%, var(--secondary) 100%) 58% top;
+  /* background: linear-gradient(var(--secondary) 0%, var(--secondary) 100%) left 58%, linear-gradient(to bottom, var(--secondary) 0%, var(--secondary) 100%) 58% top; */
+
+  background: linear-gradient(white 10%, white) left 58%, linear-gradient(to bottom, var(--secondary) 5%, white 100%) 57% top;
+
   background-size: 60% 4px, 4px 60%;
   background-repeat: no-repeat;
-  background-color: var(--primary);
+  background-color: #A5A5A5;
+  /* background-color: var(--primary); */
 }
 .title-bar button.resize:active {
-  background: var(--primary);
+  background: black
 }
 .title-bar button.hidden {
   visibility: hidden;
@@ -323,13 +334,16 @@ h2 {
   overflow: hidden;
   background-color: var(--primary);
   border: 0.1em solid var(--secondary);
+  border-radius: 10px;
   font-family: "Inconsolata", Menlo, Chicago, Geneva;
 }
 .window-pane {
   overflow-y: scroll;
+  color: #A5A5A5;
+  
   height: 100%;
   padding: 1rem 2rem;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: -0.025em;
   /*margin-bottom: 1rem;*/
 }
@@ -393,6 +407,7 @@ h2 {
   font-size: 18px;
   font-family: Chicago_12;
   cursor: pointer;
+  border-radius: 100px;
 }
 
 .btn:active {
@@ -617,10 +632,13 @@ select {
 
 /* menu-bar */
 ul[role] {
+  justify-content: center;
+  text-align: center;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style:circle;
   cursor: pointer;
+  color: white;
   font-family: Chicago_12;
   font-size: 1em;
 }
@@ -634,7 +652,9 @@ ul[role="menu-bar"] > [role="menu-item"] {
 }
 ul[role="menu-bar"] > [role="menu-item"]:focus, ul[role="menu-bar"] > [role="menu-item"]:focus-within, ul[role="menu-bar"] > [role="menu-item"]:hover {
   background: var(--secondary);
-  color: var(--primary);
+  /* color: var(--primary); */
+  color: gray;
+  font-weight: bold;
   outline: none;
 }
 ul[role="menu-bar"] > [role="menu-item"][aria-haspopup="false"] * {
@@ -648,6 +668,7 @@ ul[role="menu"] {
   background: var(--primary);
   color: initial;
   border: 1px solid;
+  border-radius: 100px;
   box-shadow: var(--box-shadow);
 }
 ul[role="menu"]::before {
