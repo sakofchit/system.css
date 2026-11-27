@@ -627,6 +627,7 @@ ul[role] {
 ul[role="menu-bar"] {
   display: flex;
   background: var(--primary);
+  box-shadow: inset 0 -1px var(--secondary);
 }
 ul[role="menu-bar"] > [role="menu-item"] {
   position: relative;
@@ -665,6 +666,9 @@ ul[role="menu"]::before {
   top: 100%;
   z-index: 99;
 }
+ul[role="menu-bar"] > [role="menu-item"] > ul[role="menu"] {
+  border-top: none;
+}
 ul[role="menu"] > [role="menu-item"] > a, ul[role="menu"] > [role="menu-item"] > button, ul[role="menu"] > [role="menu-item"][aria-haspopup="true"] {
   all: unset;
   position: relative;
@@ -689,7 +693,8 @@ ul [role="menu-item"].divider::after {
   pointer-events: none;
   display: block;
   padding: 0;
-  border-top: 1.5px dotted var(--secondary);
+  height: 1px;
+  background: linear-gradient(90deg, var(--secondary) 50%, transparent 50%) 0 0 / 2px 1px repeat-x;
 }
 
 /* styles specific to demo page */
